@@ -105,4 +105,7 @@ footer {
 
 .dark-mode header {
     background-color: #55efc4; /* Neon Green */
+.spacer {
+    height: 30px;
+}
 }
