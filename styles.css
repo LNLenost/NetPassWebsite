@@ -109,4 +109,15 @@ details p {
 
 .dark-mode header {
     background-color: #55efc4; /* Neon Green */
+    .qr-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.qr-container img {
+    width: 150px; /* Riduce la grandezza del QR code */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #3498db; /* Leggera bordatura per migliorare la visibilità */
+}
 }
