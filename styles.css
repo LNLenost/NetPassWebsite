@@ -71,29 +71,25 @@ section {
     background-color: #2980b9; /* Slightly darker blue */
 }
 
+/* Smaller QR Code */
+.qr-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.qr-container img {
+    width: 120px; /* Smaller QR code */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+}
+
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #27ae60; /* Dark Green */
+    background-color: #27ae60;
 }
 
-details {
-    background: #3498db; /* Light Blue */
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-details summary {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-details p {
-    margin-top: 5px;
-}
-
-/* Dark Mode Styles */
 .dark-mode {
     background-color: white;
     color: black;
@@ -109,15 +105,4 @@ details p {
 
 .dark-mode header {
     background-color: #55efc4; /* Neon Green */
-    .qr-container {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.qr-container img {
-    width: 150px; /* Riduce la grandezza del QR code */
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #3498db; /* Leggera bordatura per migliorare la visibilità */
-}
 }
