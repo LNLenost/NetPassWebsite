@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff5733;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color: #ff5733;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e64c2d;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+details {
+    background: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    margin-top: 5px;
+}
+
+.dark-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode section {
+    background-color: #ddd;
+}
+
+.dark-mode nav ul {
+    background-color: #aaa;
+}
+
+.dark-mode header {
+    background-color: #ff9800;
+}
