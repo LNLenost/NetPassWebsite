@@ -10,27 +10,28 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #ff5733;
+    background-color: #2ecc71; /* Green */
 }
 
 button {
-    background-color: #444;
+    background-color: #3498db; /* Light Blue */
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #666;
+    background-color: #2980b9; /* Slightly darker blue */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #333;
+    background-color: #27ae60; /* Darker Green */
 }
 
 nav ul li {
@@ -52,7 +53,7 @@ main {
 section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #222;
+    background-color: #1e824c; /* Medium Green */
     border-radius: 10px;
 }
 
@@ -61,23 +62,23 @@ section {
     padding: 10px 20px;
     margin: 10px;
     color: white;
-    background-color: #ff5733;
+    background-color: #3498db; /* Light Blue */
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #e64c2d;
+    background-color: #2980b9; /* Slightly darker blue */
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #27ae60; /* Dark Green */
 }
 
 details {
-    background: #444;
+    background: #3498db; /* Light Blue */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -92,19 +93,20 @@ details p {
     margin-top: 5px;
 }
 
+/* Dark Mode Styles */
 .dark-mode {
     background-color: white;
     color: black;
 }
 
 .dark-mode section {
-    background-color: #ddd;
+    background-color: #a8e6cf; /* Light Green */
 }
 
 .dark-mode nav ul {
-    background-color: #aaa;
+    background-color: #74b9ff; /* Soft Blue */
 }
 
 .dark-mode header {
-    background-color: #ff9800;
+    background-color: #55efc4; /* Neon Green */
 }
