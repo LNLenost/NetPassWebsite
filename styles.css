@@ -10,11 +10,11 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #2ecc71; /* Green */
+    background-color: #2ecc71;
 }
 
 button {
-    background-color: #3498db; /* Light Blue */
+    background-color: #3498db;
     color: white;
     padding: 10px;
     border: none;
@@ -24,14 +24,14 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9; /* Slightly darker blue */
+    background-color: #2980b9;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #27ae60; /* Darker Green */
+    background-color: #27ae60;
 }
 
 nav ul li {
@@ -51,10 +51,18 @@ main {
 }
 
 section {
-    margin-bottom: 40px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #1e824c; /* Medium Green */
+    background-color: #1e824c;
     border-radius: 10px;
+}
+
+#introduction {
+    margin-bottom: 40px;
+}
+
+#download {
+    margin-top: 40px;
 }
 
 .btn {
@@ -62,23 +70,22 @@ section {
     padding: 10px 20px;
     margin: 10px;
     color: white;
-    background-color: #3498db; /* Light Blue */
+    background-color: #3498db;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #2980b9; /* Slightly darker blue */
+    background-color: #2980b9;
 }
 
-/* Smaller QR Code */
 .qr-container {
     text-align: center;
     margin-top: 10px;
 }
 
 .qr-container img {
-    width: 120px; /* Smaller QR code */
+    width: 120px;
     height: auto;
     border-radius: 10px;
     border: 2px solid #3498db;
@@ -96,15 +103,15 @@ footer {
 }
 
 .dark-mode section {
-    background-color: #a8e6cf; /* Light Green */
+    background-color: #a8e6cf;
 }
 
 .dark-mode nav ul {
-    background-color: #74b9ff; /* Soft Blue */
+    background-color: #74b9ff;
 }
 
 .dark-mode header {
-    background-color: #55efc4; /* Neon Green */
+    background-color: #55efc4;
 }
 
 header {
@@ -113,10 +120,6 @@ header {
 
 .spacer {
     height: 40px;
-}
-
-#introduction {
-    margin-top: 20px;
 }
 
 html {
@@ -137,15 +140,11 @@ html {
     background-color: #0056b3;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
 #progress {
     background: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
-    font-size: 1em; 
+    font-size: 1em;
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
