@@ -54,13 +54,9 @@ section {
     padding: 20px;
     background-color: #1e824c;
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 
-#introduction {
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-}
 
 #download {
     margin-top: 40px;
