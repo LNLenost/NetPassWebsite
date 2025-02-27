@@ -58,11 +58,10 @@ section {
 }
 
 #introduction {
-    margin: 40px auto;
+    margin-bottom: 40px;
     padding: 20px;
-    background-color: #1e824c;
+    background-color: #1e824c; /* Same as other sections */
     border-radius: 10px;
-    max-width: 800px;
 }
 
 #download {
