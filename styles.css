@@ -58,9 +58,7 @@ section {
 }
 
 #introduction {
-    margin-bottom: 40px;  /* Ensuring equal spacing with other sections */
     padding: 20px;
-    background-color: #1e824c;  /* Matching background color */
     border-radius: 10px;
     max-width: 800px;
 }
