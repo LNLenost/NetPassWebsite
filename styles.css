@@ -83,6 +83,10 @@ section {
     border: 2px solid #3498db;
 }
 
+.logo {
+    width: 480px;
+}
+
 footer {
     text-align: center;
     padding: 10px;
