@@ -145,6 +145,14 @@ section {
     background: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
+    font-size: 1em; 
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#progress h2 {
+    font-size: 1.5em;
 }
 
 #progress ul {
@@ -154,5 +162,5 @@ section {
 
 #progress li {
     padding: 8px 0;
-    font-size: 1.1em;
+    font-size: 1em;
 }
