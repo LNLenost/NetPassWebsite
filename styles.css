@@ -51,9 +51,9 @@ main {
 }
 
 section {
-    margin: 40px auto;
+    margin-bottom: 40px; /* Ensures equal spacing */
     padding: 20px;
-    background-color: #1e824c;
+    background-color: #1e824c; /* Keep consistency */
     border-radius: 10px;
 }
 
