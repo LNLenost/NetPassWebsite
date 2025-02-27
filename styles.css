@@ -140,3 +140,19 @@ html {
 section {
     margin-bottom: 40px;
 }
+
+#progress {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#progress ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#progress li {
+    padding: 8px 0;
+    font-size: 1.1em;
+}
