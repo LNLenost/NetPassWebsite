@@ -51,16 +51,16 @@ main {
 }
 
 section {
-    margin-bottom: 40px; /* Ensures equal spacing */
+    margin-bottom: 40px;
     padding: 20px;
-    background-color: #1e824c; /* Keep consistency */
+    background-color: #1e824c;
     border-radius: 10px;
 }
 
 #introduction {
-    margin: 40px auto;  /* Matches the spacing of other sections */
+    margin-bottom: 40px;  /* Ensuring equal spacing with other sections */
     padding: 20px;
-    background-color: #1e824c;  /* Same as the other sections */
+    background-color: #1e824c;  /* Matching background color */
     border-radius: 10px;
     max-width: 800px;
 }
@@ -128,20 +128,6 @@ header {
 
 html {
     scroll-behavior: smooth;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
 }
 
 #progress {
