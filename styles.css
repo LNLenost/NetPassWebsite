@@ -98,6 +98,10 @@ footer {
     background-color: #a8e6cf;
 }
 
+.dark-mode progress {
+    background-color: #330800;
+}
+
 .dark-mode nav ul {
     background-color: #74b9ff;
 }
