@@ -122,6 +122,7 @@ section {
     bottom: 0;
     left: 0;
     margin-bottom: -4.5px;
+    z-index: -1;
 }
 
 .netpal img {
@@ -132,5 +133,4 @@ section {
 
 img {
     max-width: 100%;
-    z-index: -1;
 }
