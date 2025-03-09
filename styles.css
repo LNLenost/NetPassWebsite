@@ -165,15 +165,13 @@ section {
 }
 
 .netpal {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: -1;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
 }
 
 .netpal img {
-    max-width: 100%;
+    width: 50px;
     z-index: -1;
-    width: 800px;
     height: auto;
 }
