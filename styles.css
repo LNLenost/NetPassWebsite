@@ -100,10 +100,6 @@ footer {
     color: white;
 }
 
-.dark-mode section {
-    background-color: #333;
-}
-
 .dark-mode header {
     background-color: #444;
 }
@@ -112,24 +108,26 @@ footer {
     background-color: #555;
 }
 
+.dark-mode section {
+    background-color: #333;
+}
+
 .dark-mode button {
     background-color: #666;
 }
 
-section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
+.dark-mode .btn {
+    background-color: #666;
 }
 
-#section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
+.dark-mode .btn:hover {
+    background-color: #555;
+}
+
+.dark-mode .qr-container img {
+    border-color: #666;
+}
+
+.dark-mode footer {
+    background-color: #444;
 }
