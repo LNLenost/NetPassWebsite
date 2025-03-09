@@ -4,7 +4,7 @@
      padding: 0;
      background-image: url('bg-pattern.png');
      background-size: auto 100%;
-     background-repeat: repeat-x;
+     background-repeat: no-repeat;
      background-attachment: fixed;
      color: white;
      transition: background 0.3s, color 0.3s;
