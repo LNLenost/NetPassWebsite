@@ -34,19 +34,16 @@ nav ul {
     text-align: center;
     background-color: #38AAB0;
     font-size: 1.2em; 
-    border-radius: 1px;
 }
 
 nav ul li {
     display: inline;
     padding: 20px;
-    border-radius: 1px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    border-radius: 1px;
 }
 
 main {
@@ -57,6 +54,7 @@ main {
 
 section {
     padding: 20px;
+    background: #37B381;
     background: linear-gradient(90deg, #37B381, #38AAB0);
     margin-bottom: 40px;
 }
@@ -104,6 +102,7 @@ section {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+    background: #37B381;
     background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
     margin-bottom: 20px;
@@ -113,6 +112,7 @@ section {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+    background: #37B381;
     background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
     margin-bottom: 20px;
