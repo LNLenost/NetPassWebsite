@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('bg-pattern.png');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-
+     background-image: url('bg-pattern.png');
+     background-size: auto;
+     background-repeat: repeat-y;
+     background-attachment: fixed;
+     color: white;
+     transition: background 0.3s, color 0.3s;
 }
 
 header {
