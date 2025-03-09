@@ -3,7 +3,7 @@
      margin: 0;
      padding: 0;
      background-image: url('bg-pattern.png');
-     background-size: auto 100%;
+     background-size: cover;
      background-repeat: no-repeat;
      background-attachment: fixed;
      color: white;
@@ -85,10 +85,11 @@
      border-radius: 10px;
      border: 2px solid #3498db;
  }
-
+ 
  .logo {
      width: 480px;
  }
+ 
  #progress li {
      padding: 8px 0;
      font-size: 1em;
