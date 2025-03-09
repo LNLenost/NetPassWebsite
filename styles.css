@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-     background-image: url('bg-pattern.png');
-     background-size: auto;
-     background-repeat: repeat-y;
-     background-attachment: fixed;
-     color: white;
-     transition: background 0.3s, color 0.3s;
+    background-image: url('bg-pattern.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -155,4 +155,3 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin-bottom: 20px;
-}
