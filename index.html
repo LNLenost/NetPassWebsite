@@ -6,6 +6,7 @@
     <title>NetPass - StreetPass in the modern world!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon_netpass.png" type="image/png">
+    <!-- Link to the Rodin font if available as a web font -->
     <link href="https://fonts.googleapis.com/css2?family=Rodin&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -46,10 +47,10 @@
                 <li>Open FBI on your 3DS.</li>
                 <li>Scan the QR code below.</li>
                 <li>Install the file and launch NetPass. You are good to go now!</li>
+                <div class="qr-container">
+                    <img src="qrcode.png" alt="QR Code for NetPass">
+                </div>
             </ol>
-            <div class="qr-container">
-                <img src="qrcode.png" alt="QR Code for NetPass">
-            </div>
             <p>You can also download the .cia and .3dsx file.</p>
             <p>Choose your preferred format:</p>
             <div class="download-buttons">
@@ -64,14 +65,13 @@
             Upon entering a location, you get passes of others who are in the same location! 
             And, while you are at the location, others who enter it can get passes with you. 
             But beware! You can only switch locations once every 10 hours!
-            
             The Back Alley is a way to get more passes by paying using Coins. You can choose the game you want to receive the StreetPass and you will instantly receive it! The first one of the day is free :)</p>
         </section>
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
-            <a>We are still working on moving the FAQ from Discord to the website! Come back again!</a>
+        <a>We are working on moving the FAQ from Discord to the website! Come back again!</a>
         </section>
-        <section id="community">
+        <section id="discord">
             <h2>Community</h2>
             <p>Have questions? Join our <a href="https://netpass.cafe/discord">Discord server,</a> or <a href="https://gbatemp.net/threads/netpass-a-new-way-to-experience-streetpass.664005/">check out the GBATemp thread!</a></p>
         </section>
@@ -82,5 +82,6 @@
     <footer>
         <p>&copy; 2024-2025 NetPass. NetPass is being developed by Sorunome, while this website was made by <a href="https://github.com/LNLenost">LNLenost!</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
