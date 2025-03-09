@@ -1,158 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('bg-pattern.png');
-    background-size: auto 100%;
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-    color: white;
-    transition: background 0.3s, color 0.3s;
-}
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-image: url('bg-pattern.png');
+     background-size: auto 100%;
+     background-repeat: repeat-x;
+     background-attachment: fixed;
+     color: white;
+     transition: background 0.3s, color 0.3s;
+ }
+ 
+ header {
+     text-align: center;
+     padding: 20px;
+     background-color: #2ecc71;
+ }
+ 
+ button {
+     background-color: #3498db;
+     color: white;
+     padding: 10px;
+     border: none;
+     cursor: pointer;
+     margin-top: 10px;
+     border-radius: 5px;
+ }
+ 
+ button:hover {
+     background-color: #2980b9;
+ }
+ 
+ nav ul {
+     list-style: none;
+     padding: 0;
+     text-align: center;
+     background-color: #27ae60;
+ }
+ 
+ nav ul li {
+     display: inline;
+     padding: 10px;
+ }
+ 
+ nav ul li a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ main {
+     padding: 20px;
+     max-width: 800px;
+     margin: auto;
+ }
+ 
+ section {
+     padding: 20px;
+     background-color: #1e824c;
+     border-radius: 10px;
+     margin-bottom: 40px;
+ }
+ 
+ .btn {
+     display: inline-block;
+     padding: 10px 20px;
+     margin: 10px;
+     color: white;
+     background-color: #3498db;
+     text-decoration: none;
+     border-radius: 5px;
+ }
+ 
+ .btn:hover {
+     background-color: #2980b9;
+ }
+ 
+ .qr-container {
+     text-align: center;
+     margin-top: 10px;
+ }
+ 
+ .qr-container img {
+     width: 240px;
+     height: auto;
+     border-radius: 10px;
+     border: 2px solid #3498db;
+ }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #2ecc71;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #27ae60;
-}
-
-nav ul li {
-    display: inline;
-    padding: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-section {
-    padding: 20px;
-    background-color: #1e824c;
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    color: white;
-    background-color: #3498db;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
-.qr-container {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.qr-container img {
-    width: 240px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #3498db;
-}
-
-.logo {
-    width: 480px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #27ae60;
-}
-
-.dark-mode {
-    background-color: white;
-    color: black;
-}
-
-.dark-mode section {
-    background-color: #a8e6cf;
-}
-
-.dark-mode #progress {
-    background-color: #330800;
-}
-
-.dark-mode nav ul {
-    background-color: #74b9ff;
-}
-
-.dark-mode header {
-    background-color: #55efc4;
-}
-
-header {
-    padding-bottom: 20px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#progress h2 {
-    font-size: 1.5em;
-}
-
-#progress ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#progress li {
-    padding: 8px 0;
-    font-size: 1em;
-}
-
-section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-#section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+ .logo {
+     width: 480px;
+ }
+ #progress li {
+     padding: 8px 0;
+     font-size: 1em;
+ }
+ 
+ section {
+     width: 80%;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-radius: 10px;
+     margin-bottom: 20px;
+ }
+ 
+ #section {
+     width: 80%;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-radius: 10px;
+     margin-bottom: 20px;
+ }
