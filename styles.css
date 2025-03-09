@@ -11,9 +11,9 @@ body {
 
 header {
     text-align: center;
-    padding: 40px; /* Increased padding */
+    padding: 40px; 
     background-color: #2ecc71;
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.2em; 
 }
 
 .logo {
