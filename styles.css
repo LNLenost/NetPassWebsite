@@ -26,6 +26,7 @@ header {
 .logo img {
     max-width: 100%;
     height: auto;
+    width: 700px;
 }
 
 nav ul {
