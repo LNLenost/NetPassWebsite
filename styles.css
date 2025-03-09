@@ -7,7 +7,7 @@ body {
     background-repeat: repeat-y;
     background-attachment: fixed;
     color: white;
-    transition: background 0.3s, color 0.3s;
+
 }
 
 header {
