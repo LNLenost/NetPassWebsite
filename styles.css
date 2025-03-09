@@ -163,3 +163,14 @@ section {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+.bottom-left {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-left img {
+    width: 100px;
+    height: auto;
+}
