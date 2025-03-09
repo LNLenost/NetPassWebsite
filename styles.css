@@ -173,6 +173,6 @@ section {
 .netpal img {
     max-width: 100%;
     z-index: -1;
-    width: 10px;
+    width: 800px;
     height: auto;
 }
