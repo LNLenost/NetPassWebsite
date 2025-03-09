@@ -86,7 +86,7 @@ section {
     border: 2px solid #3498db;
 }
 
-logo {
+.logo {
     width: 480px;
 }
 
@@ -137,4 +137,22 @@ html {
 #progress li {
     padding: 8px 0;
     font-size: 1em;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
