@@ -2,7 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-image: url('7bg-pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     transition: background 0.3s, color 0.3s;
 }
