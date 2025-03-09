@@ -95,6 +95,7 @@ section {
     height: auto;
     border-radius: 10px;
     border: 2px solid #3498db;
+    max-width: 100%;
 }
 
 footer {
@@ -171,7 +172,7 @@ section {
 }
 
 .netpal img {
-    width: 150px;
+    width: 800px;
     z-index: -1;
     height: auto;
 }
