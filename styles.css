@@ -15,6 +15,17 @@ header {
     background-color: #2ecc71;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
 button {
     background-color: #3498db;
     color: white;
@@ -83,10 +94,6 @@ section {
     height: auto;
     border-radius: 10px;
     border: 2px solid #3498db;
-}
-
-.logo {
-    width: 480px;
 }
 
 footer {
