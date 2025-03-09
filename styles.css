@@ -27,30 +27,17 @@ header {
     height: auto;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #2ecc71;
+    background-color: #27ae60;
+    font-size: 1.2em; 
 }
 
 nav ul li {
     display: inline;
-    padding: 10px;
+    padding: 20px;
 }
 
 nav ul li a {
