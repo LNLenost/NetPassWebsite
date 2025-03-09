@@ -127,8 +127,10 @@ section {
 .netpal img {
     width: 500px;
     height: auto;
+    z-index: -1;
 }
 
 img {
     max-width: 100%;
+    z-index: -1;
 }
