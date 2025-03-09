@@ -7,14 +7,12 @@ body {
     background-attachment: fixed;
     color: white;
     transition: background 0.3s, color 0.3s;
-    max-width: 100%;
 }
 
 header {
     text-align: center;
     padding: 20px;
     background-color: #2ecc71;
-    max-width: 100%;
 }
 
 button {
@@ -132,4 +130,28 @@ footer {
 
 .dark-mode footer {
     background-color: #444;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
