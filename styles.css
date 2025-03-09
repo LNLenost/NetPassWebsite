@@ -7,12 +7,14 @@ body {
     background-attachment: fixed;
     color: white;
     transition: background 0.3s, color 0.3s;
+    max-width: 100%;
 }
 
 header {
     text-align: center;
     padding: 20px;
     background-color: #2ecc71;
+    max-width: 100%;
 }
 
 button {
