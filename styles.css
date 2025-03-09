@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-image: url('bg-pattern.png');
     background-size: contain;
+    background: linear-gradient(90deg, #37B381, #38AAB0);
     background-attachment: fixed;
     color: white;
     transition: background 0.3s, color 0.3s;
@@ -53,7 +54,7 @@ main {
 
 section {
     padding: 20px;
-    background-color: #48804D;
+    background: linear-gradient(90deg, #37B381, #38AAB0);
     margin-bottom: 40px;
 }
 
@@ -100,7 +101,7 @@ section {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #48804D;
+    background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -109,7 +110,7 @@ section {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #48804D;
+    background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
     margin-bottom: 20px;
 }
