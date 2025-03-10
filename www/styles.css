@@ -118,7 +118,7 @@ section {
     background: #37B381;
     background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
-    bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .netpal {
