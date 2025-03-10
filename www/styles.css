@@ -134,3 +134,8 @@ section {
 img {
     max-width: 100%;
 }
+
+@font-face {
+    font-family: Rodin;
+    src: url(rodin.otf);
+  }
