@@ -125,7 +125,7 @@ section {
 .netpal {
     bottom: 0;
     left: 0;
-    bottom: -4.5px;
+    bottom: -6.5px;
     z-index: -1;
     position: relative;
 }
@@ -134,7 +134,7 @@ section {
     width: 500px;
     height: auto;
     z-index: -1;
-    margin-bottom: -4.5px;
+    margin-bottom: -6.5px;
     position: relative;
 }
 
