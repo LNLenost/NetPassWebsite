@@ -13,7 +13,8 @@ header {
     text-align: center;
     padding: 60px; 
     background-color: #37B381;
-    font-size: 1.2em; 
+    font-size: 1.2em
+    bottom: 20px; 
 }
 
 .logo {
