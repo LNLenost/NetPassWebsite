@@ -30,6 +30,7 @@ header {
 }
 
 nav ul {
+    top: 20px;
     list-style: none;
     padding: 0;
     text-align: center;
@@ -39,12 +40,14 @@ nav ul {
 }
 
 nav ul li {
+    top: 20px;
     display: inline;
     padding: 20px;
     font-family: Rodin, sans-serif;
 }
 
 nav ul li a {
+    top: 20px;
     color: white;
     text-decoration: none;
     font-family: Rodin, sans-serif;
