@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     color: white;
     transition: background 0.3s, color 0.3s;
-    font-family: Rodin, sans-serif;
+    font-family: Calibri, sans-serif;
 }
 
 header {
