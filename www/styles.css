@@ -132,6 +132,7 @@ section {
     width: 500px;
     height: auto;
     z-index: -1;
+    margin-bottom: -4.5px;
 }
 
 img {
