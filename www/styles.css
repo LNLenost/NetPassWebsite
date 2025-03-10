@@ -118,14 +118,15 @@ section {
     background: #37B381;
     background: linear-gradient(90deg, #37B381, #38AAB0);
     border-radius: 10px;
-    margin-bottom: 20px;
+    bottom: 20px;
 }
 
 .netpal {
     bottom: 0;
     left: 0;
-    margin-bottom: -4.5px;
+    bottom: -4.5px;
     z-index: -1;
+    position: relative;
 }
 
 .netpal img {
@@ -133,6 +134,7 @@ section {
     height: auto;
     z-index: -1;
     margin-bottom: -4.5px;
+    position: relative;
 }
 
 img {
