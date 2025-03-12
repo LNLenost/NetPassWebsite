@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('bg-pattern.png');
+    background-image: url('assets/bg-pattern.png');
     background-size: contain;
     background-attachment: fixed;
     color: white;
@@ -13,8 +13,8 @@ header {
     text-align: center;
     padding: 60px; 
     background-color: #37B381;
-    font-size: 1.2em
-    bottom: 20px; 
+    font-size: 1.2em;
+    margin-bottom: 20px; 
 }
 
 .logo {
@@ -147,5 +147,5 @@ img {
 
 @font-face {
     font-family: Rodin;
-    src: url(rodin.otf);
+    src: url(fonts/rodin.otf);
   }
