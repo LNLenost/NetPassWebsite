@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetPass - FAQ</title>
+    <title>NetPass - Guide</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon_netpass.png" type="image/png">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="assets/netpasslogo.png" alt="NetPass' logo">
+            <p>Guide</p>
+        </div>
+    </header>
         <section id="installation-guide">
             <h2>Installation Guide</h2>
             <p>Via Universal Updater (Recommended)</p>
@@ -88,6 +94,24 @@
                 <li>Social media is fine to share, as long as it is SFW.</li>
                 <li>Sending/asking for personal data (phone number, address, full name, email, etc.) This includes your own personal data as well.</li>
                 <li>Promoting or sharing piracy resources.</li>
+        </section>
+        <section id="known-errors">
+            <h2>Known Errors</h2>
+            <h3>“libCURL error 28: Timeout was reached”</h3>
+            <p>Try opening NetPass again, or try a different network; yours might be unstable/too slow. This error could also mean that the server is down; if that’s the case, try again later.</p>
+            <h3>“libCURL error 60: Make sure that your system’s date and time are set correctly!”</h3>
+            <p>Like the error says, make sure the date and time on your console is correct.</p>
+            <ol>
+                <li>Open the Rosalina menu (L + DPAD Down + SELECT at the same time).</li>
+                <li>Go to Miscellaneous options.</li>
+                <li>Click on "update the time via NTP" (you need an internet connection to do this) and use the DPAD Left/Right to change your hour offset; press A, and your clock should be set up correctly.</li>
+            </ol>
+            <h3>“HTTP 403”</h3>
+            <p>You are most likely banned; there should be a reason on the bottom screen as to why you were banned. If you don't see a reason for your ban, or want to know the length of said ban, please open a ticket in our Discord's Mod Mail channel. Using an emulator can also cause this error; emulators are not officially supported, and we cannot help you.</p>
+            <h3>“ERROR: failed to enter location: -409”</h3>
+            <p>Either the NetPass on your console is outdated, or you don't have StreetPass enabled on any game. Make sure you have the latest version installed, and have at least 1 game with StreetPass enabled.</p>
+            <h3>If you get an error that is not listed here:</h3>
+            <p>Please ask for help in our Discord's support channels.</p>
         </section>
     <footer>
         <p><a href="index.html">Go back to the main page</p>
