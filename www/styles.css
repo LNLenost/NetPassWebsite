@@ -149,3 +149,16 @@ img {
     font-family: Rodin;
     src: url(fonts/rodin.otf);
   }
+
+  .faqlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faqlogo img {
+    max-width: 100%;
+    height: auto;
+    width: 700px;
+    margin-bottom: 15px;
+}
