@@ -4,17 +4,17 @@ body {
     background-image: url('assets/bg-pattern.png');
     background-size: contain;
     background-attachment: fixed;
-    color: white;
+    color: #20834C;
     transition: background 0.3s, color 0.3s;
-    font-family: Arial, sans-serif;
+    font-family: rodin, sans-serif;
 }
 
 header {
     text-align: center;
-    padding: 60px; 
-    background-color: #37B381;
+    padding: 40px; 
     font-size: 1.2em;
-    margin-bottom: 20px; 
+    margin-bottom: -30px;
+    font-family: seurat;
 }
 
 .logo {
@@ -36,21 +36,23 @@ nav ul {
     text-align: center;
     background-color: #38AAB0;
     font-size: 1.2em; 
-    font-family: Rodin, sans-serif;
+    font-family: seurat, sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
     top: 20px;
     display: inline;
-    padding: 20px;
-    font-family: Rodin, sans-serif;
+    padding: 10px;
+    font-family: seurat, sans-serif;
 }
 
 nav ul li a {
     top: 20px;
     color: white;
     text-decoration: none;
-    font-family: Rodin, sans-serif;
+    font-family: seurat, sans-serif;
 }
 
 main {
@@ -62,18 +64,25 @@ main {
 section {
     padding: 20px;
     background: #37B381;
-    background: linear-gradient(90deg, #37B381, #38AAB0);
+    background: linear-gradient( #ffffff, #e2f8ec);
     margin-bottom: 40px;
+    font-family: rodin, sans-serif;
+}
+
+h2 {
+    font-family: seurat;
 }
 
 .btn {
+    font-size: 1.2em;
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
     color: white;
-    background-color: #3498db;
+    background-color: #38AAB0;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-family: seurat;
 }
 
 .btn:hover {
@@ -88,8 +97,8 @@ section {
 .qr-container img {
     width: 240px;
     height: auto;
-    border-radius: 10px;
-    border: 2px solid #3498db;
+    border-radius: 15px;
+    border: 4px solid #38AAB0;
     max-width: 100%;
 }
 
@@ -97,6 +106,7 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #37B381;
+    color: white;
 }
 
 .download-buttons {
@@ -106,22 +116,22 @@ footer {
 }
 
 section {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 20px;
     background: #37B381;
-    background: linear-gradient(90deg, #37B381, #38AAB0);
-    border-radius: 10px;
+    background: linear-gradient( #ffffff, #e2f8ec);
+    border-radius: 20px;
     margin-bottom: 20px;
 }
 
 #section {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 20px;
     background: #37B381;
-    background: linear-gradient(90deg, #37B381, #38AAB0);
-    border-radius: 10px;
+    background: linear-gradient( #ffffff, #e2f8ec);
+    border-radius: 20px;
     margin-bottom: 20px;
 }
 
@@ -146,6 +156,8 @@ img {
 }
 
 @font-face {
-    font-family: Rodin;
+    font-family: rodin;
     src: url(fonts/rodin.otf);
-  }
+    font-family: seurat;
+    src: url(fonts/seurat.otf);
+}
