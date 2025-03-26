@@ -38,6 +38,7 @@ let check_url = query.get("check_url");
 
 function check(url) {
 	let xmlHttp = new XMLHttpRequest();
+	xhr.withCredentials = true;
 	xmlHttp.onreadystatechange = () => {
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
 			let data = JSON.parse(xmlHttp.responseText);
