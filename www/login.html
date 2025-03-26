@@ -36,9 +36,9 @@ function escapeHtml(s) {
 let xmlHttp = new XMLHttpRequest();
 xmlHttp.onreadystatechange = () => {
 	if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-		let data = JSON.parse(xmlHttp.responseText);
+		const data = JSON.parse(xmlHttp.responseText);
 		let html = "";
-		for (let method in data.methods) {
+		for (const method of data.methods) {
 			html += `<li><a href="${escapeHtml(method.url)}">Login with ${escapeHtml(method.name)}</a></li>`;
 		}
 		document.getElementById("login_methods").innerHTML = html;
