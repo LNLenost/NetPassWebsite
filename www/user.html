@@ -69,7 +69,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	document.getElementById("username").innerHTML = escapeHtml(account_data.username);
 	// build the console html
 	let html = "";
-	for (const console of data.consoles) {
+	for (const console of account_data.consoles) {
 		html += '<li><form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString)}" /><br>`;
 		html += `Name: <input name="name" type="text" value="${escapeHtml(console.name || "")}" /><br>`;
