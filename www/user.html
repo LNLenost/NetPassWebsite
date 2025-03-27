@@ -46,6 +46,7 @@ function escapeHtml(s) {
 
 function doRequest(method, url, data, callback, error) {
 	let xmlHttp = new XMLHttpRequest();
+	xmlHttp.withCredentials = true;
 	xmlHttp.onreadystatechange = () => {
 			if (xmlHttp.readyState == 4) {
 				if (xmlHttp.status == 200) {
