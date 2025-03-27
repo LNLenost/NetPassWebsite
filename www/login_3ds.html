@@ -12,13 +12,17 @@
         <div class="logo">
             <img src="assets/netpasslogo.png" alt="NetPass' logo">
         </div>
-        <div class="title">
-            <h1>3DS Login</h1>
-        </div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="login.html">Go Back</a></li>
+        </ul>
+    </nav>
     <section id="login">
-        <h2>Login</h2>
-        <img id="login_qr_code" alt="Qr code for login" />
+        <h2>Login with Nintendo 3DS</h2>
+        <div class="qr-container">
+            <img id="login_qr_code" alt="Qr code for login" />
+            </div>
         <p>Scan the QR code with your 3ds to log in.</p>
         <ol>
             <li>Launch NetPass</li>
@@ -27,9 +31,6 @@
             <li>Confirm the verification</li>
         </ol>
     </section>
-    <footer>
-        <p><a href="index.html">Go back to the main page</p>
-    </footer>
 <script type="application/javascript">
 let fragment = window.location.hash.substring(1);
 let query = new URLSearchParams(fragment);
