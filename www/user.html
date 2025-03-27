@@ -71,10 +71,10 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	let html = "";
 	for (const console of account_data.consoles) {
 		html += '<li><form class="console-edit-form">';
-		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" /><br>`;
+		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" />`;
 		html += `Name: <input name="name" type="text" value="${escapeHtml(console.name || "")}" /><br>`;
 		if (account_data.permission >= 10) html += `Set mii to special: <input name="special_mii" type="checkbock" ${console.special_mii ? "checked" : ""} /><br>`;
-		if (account_data.permission >= 20) html += `Set mii country: <input name="mii_country" type="text" value="${escapeHtml(console.mii_country || "")} /><br>`;
+		if (account_data.permission >= 20) html += `Set mii country: <input name="mii_country" type="text" value="${escapeHtml(console.mii_country || "")}" /><br>`;
 		if (account_data.permission >= 20) html += `Set mii region: <input name="mii_region" type="text" value="${escapeHtml(console.mii_region || "")}" /><br>`;
 		html += '<input type="submit" value="save" />';
 		html += '</form></li>';
@@ -97,14 +97,14 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	document.getElementById("link_new_console").addEventListener("click", (e) => {
 		e.preventDefault();
 		doRequest("GET", "https://api.netpass.cafe/auth/methods/add_console", null, (text) => {
-			const data = JSON.parse(xmlHttp.responseText);
+			const data = JSON.parse(text);
 			location.replace(data.methods[0].url);
 		});
 	});
 	
 	// build the 3pid html
 	doRequest("GET", "https://api.netpass.cafe/auth/methods/add_third_party", null, (text) => {
-		const data = JSON.parse(xmlHttp.responseText);
+		const data = JSON.parse(text);
 		let html = "";
 		for (const method of data.methods) {
 			if (account_data.ext_auth.includes(method.slug)) {
