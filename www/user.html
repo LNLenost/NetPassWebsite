@@ -65,7 +65,7 @@ function doRequest(method, url, data, callback, error) {
 	}
 }
 doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
-	const account_data = JSON.parse(XMLHttpRequest);
+	const account_data = JSON.parse(text);
 	document.getElementById("username").innerHTML = escapeHtml(account_data.username);
 	// build the console html
 	let html = "";
