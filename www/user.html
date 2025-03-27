@@ -20,6 +20,10 @@
     <section id="user">
         <h2>User <span id="username"></span></h2>
         <p>You are logged in!</p>
+        <form id="change-username-form">
+            Change username: <input name="username" type="text" /><br>
+            <input type="submit" value="save" />
+        </form>
     </section>
     <section id="3pid">
         <h2>Links</h2>
@@ -67,6 +71,15 @@ function doRequest(method, url, data, callback, error) {
 doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	const account_data = JSON.parse(text);
 	document.getElementById("username").innerHTML = escapeHtml(account_data.username);
+	// build the change username stuffs
+	document.getElementById("change-username-form").elements["username"].value = account_data.username;
+	document.getElementById("change-username-form").addEventListener("submit", (e) => {
+		e.preventDefault();
+		const username = document.getElementById("change-username-form").elements["username"].value;
+		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, loction.reload, location.reload);
+		return false;
+	});
+	
 	// build the console html
 	let html = "";
 	for (const console of account_data.consoles) {
@@ -90,7 +103,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 				if (form.elements[key]) post_data[key] = form.elements[key].value;
 			}
 			post_data.special_mii = form.elements["special_mii"].checked;
-			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, document.reload, document.reload);
+			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, location.reload, location.reload);
 			return false;
 		});
 	}
