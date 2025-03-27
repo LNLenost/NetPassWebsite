@@ -76,7 +76,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	document.getElementById("change-username-form").addEventListener("submit", (e) => {
 		e.preventDefault();
 		const username = document.getElementById("change-username-form").elements["username"].value;
-		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, loction.reload, location.reload);
+		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, location.reload, location.reload);
 		return false;
 	});
 	
