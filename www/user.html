@@ -68,6 +68,9 @@ function doRequest(method, url, data, callback, error) {
 		xmlHttp.send(null);
 	}
 }
+function reload() {
+	location.reload();
+}
 doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	const account_data = JSON.parse(text);
 	document.getElementById("username").innerHTML = escapeHtml(account_data.username);
@@ -76,7 +79,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	document.getElementById("change-username-form").addEventListener("submit", (e) => {
 		e.preventDefault();
 		const username = document.getElementById("change-username-form").elements["username"].value;
-		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, location.reload, location.reload);
+		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, reload, reload);
 		return false;
 	});
 	
@@ -103,7 +106,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 				if (form.elements[key]) post_data[key] = form.elements[key].value;
 			}
 			post_data.special_mii = form.elements["special_mii"].checked;
-			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, location.reload, location.reload);
+			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
 			return false;
 		});
 	}
@@ -132,7 +135,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 		for (const ele of document.getElementsByClassName("account-3pid-unlink")) {
 			ele.addEventListener("click", (e) => {
 				e.preventDefault();
-				doRequest("DELETE", ele.getAttribute("src"), null, location.reload, location.reload);
+				doRequest("DELETE", ele.getAttribute("src"), null, reload, reload);
 			});
 		}
 	});
