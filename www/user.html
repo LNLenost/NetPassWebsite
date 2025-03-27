@@ -89,7 +89,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 			for (const key of ["name", "mii_country", "mii_region"]) {
 				if (form.elements[key]) post_data[key] = form.elements[key].value;
 			}
-			form.elements.special_mii = form.elements["special_mii"].checked;
+			post_data.special_mii = form.elements["special_mii"].checked;
 			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, document.reload, document.reload);
 			return false;
 		});
