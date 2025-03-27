@@ -82,6 +82,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	document.getElementById("link_consoles").innerHTML = html;
 	for (const form of document.getElementsByClassName("console-edit-form")) {
 		form.addEventListener("submit", (e) => {
+			e.preventDefault();
 			let post_data = {
 				mac: parseInt(form.elements["mac"].value, 10),
 			};
