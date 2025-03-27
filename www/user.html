@@ -128,7 +128,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 			if (!account_data.ext_auth.includes(method.slug)) {
 				html += `<li><a href="${escapeHtml(method.url)}">Login with ${escapeHtml(method.name)}</a></li>`;
 			} else {
-				html += `<li>${escapeHtml(method.name)}: Already linked. <a class="account-3pid-unlink" href="https://api.netpass.cafe/account/me/${escapeHtml(method.slug)}">Unlink</a></li>`;
+				html += `<li>${escapeHtml(method.name)}: Already linked. <a class="account-3pid-unlink" href="https://api.netpass.cafe/account/me/auth/${escapeHtml(method.slug)}">Unlink</a></li>`;
 			}
 		}
 		document.getElementById("link_methods").innerHTML = html;
