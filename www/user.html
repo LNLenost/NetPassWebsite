@@ -71,7 +71,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 	let html = "";
 	for (const console of account_data.consoles) {
 		html += '<li><form class="console-edit-form">';
-		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString)}" /><br>`;
+		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" /><br>`;
 		html += `Name: <input name="name" type="text" value="${escapeHtml(console.name || "")}" /><br>`;
 		if (account_data.permission >= 10) html += `Set mii to special: <input name="special_mii" type="checkbock" ${console.special_mii ? "checked" : ""} /><br>`;
 		if (account_data.permission >= 20) html += `Set mii country: <input name="mii_country" type="text" value="${escapeHtml(console.mii_country || "")} /><br>`;
