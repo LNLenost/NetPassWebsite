@@ -135,7 +135,7 @@ doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
 		for (const ele of document.getElementsByClassName("account-3pid-unlink")) {
 			ele.addEventListener("click", (e) => {
 				e.preventDefault();
-				doRequest("DELETE", ele.getAttribute("src"), null, reload, reload);
+				doRequest("DELETE", ele.getAttribute("href"), null, reload, reload);
 			});
 		}
 	});
