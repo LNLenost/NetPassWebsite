@@ -88,7 +88,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 					html += "You are currently subscribed<br>";
 					html += `<a class="cancel-sub" href="${BASE_URL}/account/me/subscriptions/${escapeHtml(cur_sub.id)}">Cancel Subscription</a><br>`;
 				} else {
-					html += `<a href="${BASE_URL}/account/me/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
+					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
 				}
 				html += `Grants role ${escapeHtml(getRoleName(sub.permission))}`;
 				html += "</li>";
