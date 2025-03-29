@@ -54,7 +54,7 @@ const BASE_URL = "https://api.netpass.cafe";
 function getRoleName(level) {
 	let role_name = "";
 	for (const p of permission_map) {
-		if (p.level >= level) {
+		if (p.level <= level) {
 			role_name = p.name;
 		}
 	}
