@@ -6,6 +6,7 @@
     <title>NetPass - User</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon_netpass.png" type="image/png">
+    <script type="application/javascript" src="user.js" async></script>
 </head>
 <body>
     <header>
@@ -25,6 +26,12 @@
             <input type="submit" value="save" />
         </form>
     </section>
+    <section id="subscriptions">
+        <h2>Subscriptions</h2>
+        <p>Current role: <span id="current-role"></span></p>
+        <ul id="subscriptions-list"></ul>
+    </section>
+    </section>
     <section id="3pid">
         <h2>Links</h2>
         <p>You can link the following 3rd party logins:</p>
@@ -35,110 +42,5 @@
         <ul id="link_consoles"></ul>
         <button id="link_new_console">Link new console</button>
     </section>
-<script type="application/javascript">
-
-function escapeHtml(s) {
-	return s.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/"/g, "&quot;")
-		.replace(/'/g, "&#39;");
-}
-
-function doRequest(method, url, data, callback, error) {
-	let xmlHttp = new XMLHttpRequest();
-	xmlHttp.withCredentials = true;
-	xmlHttp.onreadystatechange = () => {
-			if (xmlHttp.readyState == 4) {
-				if (xmlHttp.status == 200) {
-					callback(xmlHttp.responseText);
-				} else if (error) {
-					error(xmlHttp);
-				}
-			}
-	};
-	xmlHttp.open(method, url, true);
-	if (data) {
-		xmlHttp.setRequestHeader("Content-Type", "application/json");
-		xmlHttp.send(JSON.stringify(data));
-	} else {
-		xmlHttp.send(null);
-	}
-}
-function reload() {
-	location.reload();
-}
-doRequest("GET", "https://api.netpass.cafe/account/me", null, (text) => {
-	const account_data = JSON.parse(text);
-	document.getElementById("username").innerHTML = escapeHtml(account_data.username);
-	// build the change username stuffs
-	document.getElementById("change-username-form").elements["username"].value = account_data.username;
-	document.getElementById("change-username-form").addEventListener("submit", (e) => {
-		e.preventDefault();
-		const username = document.getElementById("change-username-form").elements["username"].value;
-		doRequest("PUT", "https://api.netpass.cafe/account/me/username", { username }, reload, reload);
-		return false;
-	});
-	
-	// build the console html
-	let html = "";
-	for (const console of account_data.consoles) {
-		html += '<li><form class="console-edit-form">';
-		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" />`;
-		html += `Name: <input name="name" type="text" maxlength="50" value="${escapeHtml(console.name || "")}" /><br>`;
-		if (account_data.permission >= 10) html += `Set mii to special: <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
-		if (account_data.permission >= 20) html += `Set mii country: <input name="mii_country" type="text" maxlength="15" value="${escapeHtml(console.mii_country || "")}" /><br>`;
-		if (account_data.permission >= 20) html += `Set mii region: <input name="mii_region" type="text" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
-		html += '<input type="submit" value="save" />';
-		html += '</form></li>';
-	}
-	document.getElementById("link_consoles").innerHTML = html;
-	for (const form of document.getElementsByClassName("console-edit-form")) {
-		form.addEventListener("submit", (e) => {
-			e.preventDefault();
-			let post_data = {
-				mac: parseInt(form.elements["mac"].value, 10),
-			};
-			for (const key of ["name", "mii_country", "mii_region"]) {
-				if (form.elements[key].value) post_data[key] = form.elements[key].value;
-			}
-			post_data.special_mii = form.elements["special_mii"].checked;
-			doRequest("PUT", `https://api.netpass.cafe/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
-			return false;
-		});
-	}
-	
-	// add new console callback
-	document.getElementById("link_new_console").addEventListener("click", (e) => {
-		e.preventDefault();
-		doRequest("GET", "https://api.netpass.cafe/auth/methods/add_console", null, (text) => {
-			const data = JSON.parse(text);
-			location.replace(data.methods[0].url);
-		});
-	});
-	
-	// build the 3pid html
-	doRequest("GET", "https://api.netpass.cafe/auth/methods/add_third_party", null, (text) => {
-		const data = JSON.parse(text);
-		let html = "";
-		for (const method of data.methods) {
-			if (!account_data.ext_auth.includes(method.slug)) {
-				html += `<li><a href="${escapeHtml(method.url)}">Login with ${escapeHtml(method.name)}</a></li>`;
-			} else {
-				html += `<li>${escapeHtml(method.name)}: Already linked. <a class="account-3pid-unlink" href="https://api.netpass.cafe/account/me/auth/${escapeHtml(method.slug)}">Unlink</a></li>`;
-			}
-		}
-		document.getElementById("link_methods").innerHTML = html;
-		for (const ele of document.getElementsByClassName("account-3pid-unlink")) {
-			ele.addEventListener("click", (e) => {
-				e.preventDefault();
-				doRequest("DELETE", ele.getAttribute("href"), null, reload, reload);
-			});
-		}
-	});
-}, (err) => {
-	location.replace("/");
-});
-</script>
 </body>
 </html>
