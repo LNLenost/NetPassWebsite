@@ -74,7 +74,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	});
 	
 	// build the current role and subscriptions stuffs
-	document.getElementById("curent-role").innerText = getRoleName(account_data.permission);
+	document.getElementById("current-role").innerText = getRoleName(account_data.permission);
 	doRequest("GET", `${BASE_URL}/subscriptions`, null, (text) => {
 		const available_subs = JSON.parse(text);
 		doRequest("GET", `${BASE_URL}/account/me/subscriptions/list`, null, (text) => {
