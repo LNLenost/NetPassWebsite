@@ -80,8 +80,8 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 		doRequest("GET", `${BASE_URL}/account/me/subscriptions/list`, null, (text) => {
 			const current_subs = JSON.parse(text);
 			let html = "";
-			for (const sub of available_subs) {
-				const cur_sub = current_subs.find((x) => x.price_id == sub.price_id);
+			for (const sub of available_subs.subscriptions) {
+				const cur_sub = current_subs.subscriptions.find((x) => x.price_id == sub.price_id);
 				html += "<li>";
 				html += `<strong>${escapeHtml(sub.name)}</strong><br>`;
 				if (cur_sub) {
