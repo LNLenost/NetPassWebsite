@@ -123,7 +123,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 				mac: parseInt(form.elements["mac"].value, 10),
 			};
 			for (const key of ["name", "mii_country", "mii_region"]) {
-				if (form.elements[key].value) post_data[key] = form.elements[key].value;
+				if (form.elements[key] && form.elements[key].value) post_data[key] = form.elements[key].value;
 			}
 			post_data.special_mii = form.elements["special_mii"].checked;
 			doRequest("PUT", `${BASE_URL}/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
