@@ -34,31 +34,35 @@ const permission_map = [
 	{
 		level: 0,
 		name: "Regular user",
+		description: "",
 	},
 	{
 		level: 10,
 		name: "Basic Donator",
+		description: "This grants you the ability to automatically mark your Mii as a special Mii when others receive it.",
 	},
 	{
 		level: 100,
 		name: "Moderator",
+		description: "",
 	},
 	{
 		level: 1000,
 		name: "Fox",
+		description: "",
 	},
 ];
 
 const BASE_URL = "https://api.netpass.cafe";
 
-function getRoleName(level) {
-	let role_name = "";
+function getRole(level) {
+	let role = {};
 	for (const p of permission_map) {
 		if (p.level <= level) {
-			role_name = p.name;
+			role = p;
 		}
 	}
-	return role_name;
+	return role || permission_map[0];
 }
 
 doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
@@ -74,7 +78,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	});
 	
 	// build the current role and subscriptions stuffs
-	document.getElementById("current-role").innerText = getRoleName(account_data.permission);
+	document.getElementById("current-role").innerText = getRole(account_data.permission).name;
 	doRequest("GET", `${BASE_URL}/subscriptions`, null, (text) => {
 		const available_subs = JSON.parse(text);
 		doRequest("GET", `${BASE_URL}/account/me/subscriptions/list`, null, (text) => {
@@ -85,12 +89,18 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 				html += "<li>";
 				html += `<strong>${escapeHtml(sub.name)}</strong><br>`;
 				if (cur_sub) {
-					html += "You are currently subscribed<br>";
+					const date = new Date(cur_sub.expiracy * 1000);
+					if (cur_sub.active) {
+						html += `You are currently subscribed, renews at ${escapeHtml(date.toLocaleString())}<br>`;
+					} else {
+						html += `Expires at ${escapeHtml(date.toLocaleString())}<br>`;
+					}
 					html += `<a class="cancel-sub" href="${BASE_URL}/account/me/subscriptions/${escapeHtml(cur_sub.id)}">Cancel Subscription</a><br>`;
 				} else {
 					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
 				}
-				html += `Grants role ${escapeHtml(getRoleName(sub.permission))}`;
+				html += `Grants role ${escapeHtml(getRole(sub.permission).name)}<br>${escapeHtml(getRole(sub.permission).description)}<br>`;
+				html += `Costs: ${escapeHtml(sub.currency)} ${escapeHtml(sub.price / 100)} per month`;
 				html += "</li>";
 			}
 			document.getElementById("subscriptions-list").innerHTML = html;
