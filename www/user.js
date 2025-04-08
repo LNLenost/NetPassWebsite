@@ -1,4 +1,7 @@
 function escapeHtml(s) {
+	if (typeof s !== 'string') { 
+		s = s.toString();
+	}
 	return s.replace(/&/g, "&amp;")
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;")
@@ -100,7 +103,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
 				}
 				html += `Grants role ${escapeHtml(getRole(sub.permission).name)}<br>${escapeHtml(getRole(sub.permission).description)}<br>`;
-				html += `Costs: ${escapeHtml(sub.currency)} ${escapeHtml(sub.price / 100)} per month`;
+				html += `Costs: ${escapeHtml(sub.currency.toUpperCase())} ${escapeHtml(sub.price / 100)} per month`;
 				html += "</li>";
 			}
 			document.getElementById("subscriptions-list").innerHTML = html;
