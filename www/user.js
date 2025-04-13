@@ -119,15 +119,15 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	// build the console html
 	let html = "";
 	for (const console of account_data.consoles) {
-		html += '<li><form class="console-edit-form">';
+		html += '<form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" />`;
 		html += `<p><b>Name:</b></p><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /><br>`;
 		if (account_data.permission >= 10) html += `<b>Set Mii to Special</b>: <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
 		if (account_data.permission >= 20) html += `<p><b>Set Mii Country:</b></p><input name="mii_country" type="text" class="txt" maxlength="50" value="${escapeHtml(console.mii_country || "")}" /><br>`;
-		if (account_data.permission >= 20) html += `<p><b>Set Mii Region</b></p>: <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
+		if (account_data.permission >= 20) html += `<p><b>Set Mii Region:</b></p> <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
 		html += '<input type="submit" value="Save" class="btn" />';
 		html += '<hr class="rounded">'
-		html += '</form></li>';
+		html += '</form>';
 	}
 	document.getElementById("link_consoles").innerHTML = html;
 	for (const form of document.getElementsByClassName("console-edit-form")) {
@@ -176,4 +176,5 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 }, (err) => {
 	location.replace("/");
 });
-															       
+
+		
