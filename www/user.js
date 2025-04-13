@@ -102,7 +102,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 				} else {
 					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
 				}
-				html += `Grants role ${escapeHtml(getRole(sub.permission).name)}<br>${escapeHtml(getRole(sub.permission).description)}<br>`;
+				html += `Grants role: ${escapeHtml(getRole(sub.permission).name)}<br>${escapeHtml(getRole(sub.permission).description)}<br>`;
 				html += `Costs: ${escapeHtml(sub.currency.toUpperCase())} ${escapeHtml(sub.price / 100)} per month`;
 				html += "</li>";
 			}
@@ -121,10 +121,10 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	for (const console of account_data.consoles) {
 		html += '<form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" />`;
-		html += `<p><b>Name:</b></p><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /><br>`;
-		if (account_data.permission >= 10) html += `<b>Set Mii to Special</b>: <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
-		if (account_data.permission >= 20) html += `<p><b>Set Mii Country:</b></p><input name="mii_country" type="text" class="txt" maxlength="50" value="${escapeHtml(console.mii_country || "")}" /><br>`;
-		if (account_data.permission >= 20) html += `<p><b>Set Mii Region:</b></p> <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
+		html += `<p><b>Name:</b><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /></p>`;
+		if (account_data.permission >= 10) html += `<b>Set Mii to Special:</b> <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
+		if (account_data.permission >= 20) html += `<p><b>Set Mii Country:</b><input name="mii_country" type="text" class="txt" maxlength="50" value="${escapeHtml(console.mii_country || "")}" /></p>`;
+		if (account_data.permission >= 20) html += `<p><b>Set Mii Region:</b> <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /></p>`;
 		html += '<input type="submit" value="Save" class="btn" />';
 		html += '<hr class="rounded">'
 		html += '</form>';
