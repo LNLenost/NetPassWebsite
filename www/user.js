@@ -121,11 +121,12 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	for (const console of account_data.consoles) {
 		html += '<li><form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${escapeHtml(console.mac.toString())}" />`;
-		html += `Name: <input name="name" type="text" maxlength="50" value="${escapeHtml(console.name || "")}" /><br>`;
-		if (account_data.permission >= 10) html += `Set mii to special: <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
-		if (account_data.permission >= 20) html += `Set mii country: <input name="mii_country" type="text" maxlength="15" value="${escapeHtml(console.mii_country || "")}" /><br>`;
-		if (account_data.permission >= 20) html += `Set mii region: <input name="mii_region" type="text" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
-		html += '<input type="submit" value="save" />';
+		html += `<p><b>Name:</b></p><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /><br>`;
+		if (account_data.permission >= 10) html += `<b>Set Mii to Special</b>: <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
+		if (account_data.permission >= 20) html += `<p><b>Set Mii Country:</b></p><input name="mii_country" type="text" class="txt" maxlength="50" value="${escapeHtml(console.mii_country || "")}" /><br>`;
+		if (account_data.permission >= 20) html += `<p><b>Set Mii Region</b></p>: <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /><br>`;
+		html += '<input type="submit" value="Save" class="btn" />';
+		html += '<hr class="rounded">'
 		html += '</form></li>';
 	}
 	document.getElementById("link_consoles").innerHTML = html;
@@ -175,3 +176,4 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 }, (err) => {
 	location.replace("/");
 });
+															       
