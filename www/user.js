@@ -100,7 +100,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 					}
 					html += `<a class="cancel-sub" href="${BASE_URL}/account/me/subscriptions/${escapeHtml(cur_sub.id)}">Cancel Subscription</a><br>`;
 				} else {
-					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subsribe</a><br>`;
+					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subscribe</a><br>`;
 				}
 				html += `Grants role: ${escapeHtml(getRole(sub.permission).name)}<br>${escapeHtml(getRole(sub.permission).description)}<br>`;
 				html += `Costs: ${escapeHtml(sub.currency.toUpperCase())} ${escapeHtml(sub.price / 100)} per month`;
