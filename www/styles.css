@@ -119,6 +119,7 @@ h2 {
 footer {
     text-align: center;
     padding: 10px;
+    bottom: 10px;
     background-color: #37B381;
     color: white;
 }
@@ -134,9 +135,9 @@ a {
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 7px;
+    display: block;
+    text-align: center;
+    gap: 8px;
 }
 
 section {
