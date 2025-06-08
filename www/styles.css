@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     color: #20834C;
     transition: background 0.3s, color 0.3s;
-    font-family: rodin, sans-serif;
+    font-family: rodin, arial;
 }
 
 header {
@@ -36,7 +36,7 @@ nav ul {
     text-align: center;
     background-color: #38AAB0;
     font-size: 1.2em; 
-    font-family: seurat, sans-serif;
+    font-family: seurat, arial;
     display: flex;
     justify-content: center;
 }
@@ -45,14 +45,12 @@ nav ul li {
     top: 20px;
     display: inline;
     padding: 10px;
-    font-family: seurat, sans-serif;
 }
 
 nav ul li a {
     top: 20px;
     color: white;
     text-decoration: none;
-    font-family: seurat, sans-serif;
 }
 
 main {
@@ -66,7 +64,7 @@ section {
     background: #37B381;
     background: linear-gradient( #ffffff, #e2f8ec);
     margin-bottom: 40px;
-    font-family: rodin, sans-serif;
+    font-family: rodin, arial;
 }
 
 h2 {
@@ -84,6 +82,7 @@ h2 {
     border-radius: 30px;
     font-family: seurat;
     border: 0;
+	transition: ease-in-out 0.1s;
 }
 
 .txt {
@@ -194,3 +193,82 @@ img {
     font-family: seurat;
     src: url(fonts/seurat.otf);
 }
+
+
+
+.flex, .flexreturn {
+display:flex;
+font-family: seurat, arial;
+background-color: #20834CBD;
+border-radius:200px;
+width:700px;
+margin: 20px auto 0;
+}
+
+.flexreturn {
+width:200px;
+}
+
+.navbarbutton {
+background-color: #37b381;
+height:42px;
+font-size:19px;
+width:172px;
+flex-grow:2;
+transition: ease-in-out 0.1s;
+margin: 0 2px;
+}
+
+.returnrounded {
+border-radius:200px;
+margin:0 !important;
+}
+
+.navstart {
+border-radius:200px 0 0 200px;
+margin-left:0;
+}
+
+.navend {
+border-radius:0 200px 200px 0;
+margin-right:0;
+}
+
+.flex a, .flexreturn a {
+color:white;
+text-decoration:none;
+}
+
+.textcentermid {
+text-align:center;
+}
+
+.navbarbutton:hover {
+background-color: #1dad77;
+
+}
+
+@media (max-width:800px) {
+
+.flex {
+width:85%;	
+}
+
+}
+
+@media (max-width:600px) {
+
+.navbarbutton {
+width:auto;
+padding:0 2px;
+}
+
+}
+
+@media (max-width:480px) {
+
+.flex {
+width:95%;	
+}
+
+                                }
