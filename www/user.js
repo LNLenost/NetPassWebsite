@@ -139,7 +139,10 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			for (const key of ["name", "mii_country", "mii_region"]) {
 				if (form.elements[key] && form.elements[key].value) post_data[key] = form.elements[key].value;
 			}
-			post_data.special_mii = form.elements["special_mii"].checked;
+			post_data.special_mii = false;
+			if (form.elements["special_mii"]) {
+				post_data.special_mii = form.elements["special_mii"].checked;
+			}
 			doRequest("PUT", `${BASE_URL}/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
 			return false;
 		});
@@ -176,5 +179,3 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 }, (err) => {
 	location.replace("/");
 });
-
-		
