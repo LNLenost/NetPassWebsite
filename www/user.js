@@ -148,7 +148,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			doRequest("PUT", `${BASE_URL}/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
 			return false;
 		});
-		const mac_element = document.getElementById("show-mac-" + escapeHtml(console.mac.toString()));
+		const mac_element = document.getElementById("show-mac-" + escapeHtml(form.elements["mac"].value));
 		mac_element.addEventListener("click", (e) => {
 			e.preventDefault();
 			const mac = [...parseInt(form.elements["mac"].value, 10)
