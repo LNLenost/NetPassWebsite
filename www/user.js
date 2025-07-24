@@ -118,8 +118,11 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 	
 	// build the console html
 	let html = "";
+	let i = 0;
 	for (const console of account_data.consoles) {
+		i++;
 		const machtml = escapeHtml(console.mac.toString());
+		html += `<h3>Linked Console ${escapeHtml(console.name ? console.name : i)}</h3>`;
 		html += '<form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${machtml}" />`;
 		html += `<p><b>Name:</b><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /></p>`;
@@ -156,8 +159,10 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 				.padStart(12, "0")
 				.split("")
 				.entries()
-				.map(entry => entry[1] + (entry[0] % 2 ? ":" : ""))
-			].join("").slice(0, -1).toUpperCase();
+			].map(entry => entry[1] + (entry[0] % 2 ? ":" : ""))
+				.join("")
+				.slice(0, -1)
+				.toUpperCase();
 			mac_element.outerHTML = `<span class="mac-address">${escapeHtml(mac)}</span>`;
 		});
 	}
