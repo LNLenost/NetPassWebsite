@@ -194,7 +194,9 @@ img {
     src: url(fonts/seurat.otf);
 }
 
-
+.mac-address {
+	font-family: "Lucida Console", "Courier New", monospace;
+}
 
 .flex, .flexreturn {
 display:flex;
