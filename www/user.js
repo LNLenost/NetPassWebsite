@@ -123,7 +123,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 		html += '<form class="console-edit-form">';
 		html += `<input type="hidden" name="mac" value="${machtml}" />`;
 		html += `<p><b>Name:</b><input name="name" type="text" class="txt" maxlength="50" value="${escapeHtml(console.name || "")}" /></p>`;
-		html += `<p><b>Mac: <a class="show-mac-${machtml}" href="#">Click to show</a></p>`
+		html += `<p><b>: <a class="show-mac-${machtml}" href="#">Click to show</a></p>`
 		if (account_data.permission >= 10) html += `<b>Set Mii to Special:</b> <input name="special_mii" type="checkbox" ${console.special_mii ? "checked" : ""} /><br>`;
 		if (account_data.permission >= 20) html += `<p><b>Set Mii Country:</b><input name="mii_country" type="text" class="txt" maxlength="50" value="${escapeHtml(console.mii_country || "")}" /></p>`;
 		if (account_data.permission >= 20) html += `<p><b>Set Mii Region:</b> <input name="mii_region" type="text" class="txt" maxlength="15" value="${escapeHtml(console.mii_region || "")}" /></p>`;
@@ -148,7 +148,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			doRequest("PUT", `${BASE_URL}/account/me/console/${form.elements["mac"].value}`, post_data, reload, reload);
 			return false;
 		});
-		const mac_element = document.getElementById("show-mac-" + escapeHtml(console.mac.toString());
+		const mac_element = document.getElementById("show-mac-" + escapeHtml(console.mac.toString()));
 		mac_element.addEventListener("click", (e) => {
 			e.preventDefault();
 			const mac = [...parseInt(form.elements["mac"].value, 10)
