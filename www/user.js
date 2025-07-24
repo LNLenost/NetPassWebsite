@@ -158,7 +158,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 				.split("")
 				.entries()
 				.map(entry => entry[1] + (entry[0] % 2 ? ":" : ""))
-			].join("").slice(0, -1);
+			].join("").slice(0, -1).toUpperCase();
 			mac_element.outerHTML = `<span class="mac-address">${escapeHtml(mac)}</span>`;
 		});
 	}
