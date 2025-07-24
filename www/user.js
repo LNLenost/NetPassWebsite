@@ -154,7 +154,6 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			const mac = [...parseInt(form.elements["mac"].value, 10)
 				.toString(16)
 				.padStart(12, "0")
-				.padStart(12, "0")
 				.split("")
 				.entries()
 				.map(entry => entry[1] + (entry[0] % 2 ? ":" : ""))
