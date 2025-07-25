@@ -98,6 +98,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 					} else {
 						html += `Expires at ${escapeHtml(date.toLocaleString())}<br>`;
 					}
+					html += `<a href="${BASE_URL}/accont/me/subscriptions/${escapeHtml(cur_sub.id)}/modify">Manage Subscription</a><br>`
 					html += `<a class="cancel-sub" href="${BASE_URL}/account/me/subscriptions/${escapeHtml(cur_sub.id)}">Cancel Subscription</a><br>`;
 				} else {
 					html += `<a href="${BASE_URL}/account/me/subscriptions/create/${escapeHtml(sub.price_id)}">Subscribe</a><br>`;
