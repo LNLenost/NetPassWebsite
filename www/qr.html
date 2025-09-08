@@ -66,18 +66,48 @@ function bufferWriteString(buffer, string) {
 	bufferWriteRawString(buffer, "\0");
 }
 
+function bufferWriteBuffer(buffer, newbuf) {
+	new Uint8Array(buffer.buffer).set(newbuf, buffer.cursor);
+	buffer.cursor += newbuf.byteLength;
+}
+
 function bufferFinalise(buffer) {
 	return buffer.buffer.slice(0, buffer.cursor);
 }
 
 const form = document.getElementById("qr-data");
+
+function showCorrectForm() {
+	const type = form.elements["type"].value;
+	for (elem of document.getElementsByClassName("qr-form-values")) {
+		elem.style.display = "none";
+	}
+	for (elem of document.getElementsByClassName(type)) {
+		elem.style.display = "";
+	}
+}
+
+showCorrectForm();
+form.elements["type"].addEventListener("change", showCorrectForm);
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const url = form.elements["url"].value;
+	const type = form.elements["type"].value;
 	const buffer = newBuffer(1000);
 	bufferWriteRawString(buffer, "NPQR");
-	bufferWriteInt(buffer, 3); // method = download pass
-	bufferWriteString(buffer, url);
+	if (type == "dl-pass") {
+		const url = form.elements["url"].value;
+		bufferWriteInt(buffer, 3); // method = download pass
+		bufferWriteString(buffer, url);
+	}
+	if (type == "join-event-location") {
+		const name = form.elements["name"].value;
+		const uuid = form.elements["uuid"].value;
+		bufferWriteInt(buffer, 2); // method = join event location
+		bufferWriteString(buffer, name); // name of the event location
+		bufferWriteBuffer(buffer, Uint8Array.fromHex(uuid.trim().split("-").join("")));
+	}
+	
 
 	const bytes = bufferFinalise(buffer);
 	new QRCode.toDataURL([{data: bytes, mode: "bytes"}], { errorCorrectionLevel: "L" }, (err, url) => {
