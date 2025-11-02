@@ -85,28 +85,9 @@
             <p>NetPass is intended to be ran on official 3DS hardware.</p>
             <p>Emulators are not blocked, but simply don't emulate the 3DS accurately enough as of right now to allow
                 NetPass to function properly. It is not a flaw of NetPass and therefore cannot be fixed by us.</p>
-            <h3>What does the QR code scanner do?</h3>
-            <p>For clarification, this feature is not related to the remote installation process seen in the <a
-                href="install.html">Installation Guide</a>.</p>
-            <p>The "Scan QR Code" option in the NetPass settings will activate the outer cameras on your 3DS (with the
-                inner cameras being an option as well.) With this feature, you are able to <a
-                href="https://api.netpass.cafe/auth/3ds/login">log in to the NetPass website</a> and access your user
-                settings. From there, you have multiple things you can do with your NetPass account, such as: set up a
-                reoccurring donation to receive a special role and give your Mii <a
-                href="https://miiwiki.org/wiki/Special_Miis#StreetPass_Mii_Plaza">golden pants</a>, link your
-                Discord/Reddit/GitLab accounts, and more.</p>
-            <p>In the future, you will be able to use this to download 3rd party integrations or add-ons.</p>
-            <h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
-            <p>The Integrations option you see under your settings is meant for configuring 3rd party services. At the
-                moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
-            <p>With the Pretendo integration, NetPass is able to download passes from your Pretendo friends list and
-                distribute them as if they came from NetPass. Otherwise, with this integration toggled off, NetPass SPR
-                will block Pretendo SPR passes.</p>
-            <p>As a final disclaimer, third party integrations are outside of NetPass moderation and should be used at
-                your own risk.</p>
         </section>
         <section id="back-alley">
-            <h2>Back Alley</h3>
+            <h2>Back Alley</h2>
             <h3>What is the Back Alley?</h3>
             <p>The Back Alley is a mechanism meant for getting passes on specific games using Play Coins.</p>
             <h3>How do I use it?</h3>
@@ -141,6 +122,53 @@
             </ul>
             <h3>Can I get more than 6 passes per day?</h3>
             <p>Normally no.</p>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <h3>What does the QR code scanner do?</h3>
+            <p>For clarification, this feature is not related to the remote installation process seen in the <a
+                href="install.html">Installation Guide</a>.</p>
+            <p>The "Scan QR Code" option in the NetPass settings will activate the outer cameras on your 3DS (with the
+                inner cameras being an option as well.) With this feature, you are able to <a
+                href="https://api.netpass.cafe/auth/3ds/login">log in to the NetPass website</a> and access your user
+                settings. From there, you have multiple things you can do with your NetPass account, such as: set up a
+                reoccurring donation to receive a special role and give your Mii <a
+                href="https://miiwiki.org/wiki/Special_Miis#StreetPass_Mii_Plaza">golden pants</a>, link your
+                Discord/Reddit/GitLab accounts, and more.</p>
+            <p>In the future, you will be able to use this to download 3rd party integrations or add-ons.</p>
+            <h3>Create a QR code to download a specific StreetPass</h3>
+            <ol>
+                <li>Install the <strong>CEC Tool</strong> (See <a 
+                    href="install.html">Installation Guide</a> for detailed install instructions (but for NetPass))</li>
+                    <ul>
+                        <li>Universal Updater: Search for "CEC Tool"</li>
+                        <li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">QR code</a>
+                             for remote installation</li>
+                        <li>Manual: Use the latest <a
+                            href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a> release</li>
+                    </ul>
+                <li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file</strong></li>
+                <li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to a website
+                     with "Let's Encrypt" https certification</li>
+                    <ul>
+                        <li><a href="https://catbox.moe/">Catbox</a> works as an example</li>
+                    </ul>
+                <li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR Generator</a> specifically</li>
+                    <ul>
+                        <li>The URL needs to directly download the file when opened, it doesn't work if it leads to a page
+                             with a "Download" button!</li>
+                    </ul>
+                <li>Scan the QR Code with NetPass</li>
+            </ol>
+            <h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
+            <p>The Integrations option you see under your settings is meant for configuring 3rd party services. At the
+                moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
+            <p>With the Pretendo integration, NetPass is able to download passes from your Pretendo friends list and
+                distribute them as if they came from NetPass. Otherwise, with this integration toggled off, NetPass SPR
+                will block Pretendo SPR passes.</p>
+            <p>As a final disclaimer, third party integrations are outside of NetPass moderation and should be used at
+                your own risk.</p>
         </section>
         <section id="moderation-reporting">
             <h2>Moderation and Reporting</h2>
