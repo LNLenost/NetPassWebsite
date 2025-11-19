@@ -169,6 +169,17 @@
                 will block Pretendo SPR passes.</p>
             <p>As a final disclaimer, third party integrations are outside of NetPass moderation and should be used at
                 your own risk.</p>
+            <h3>Custom NetPass Backgrounds</h3>
+            <ol>
+                <li>Prepare location images</li>
+                <ul>
+                    <li>400x240 pixels</li>
+                    <li>.png .jpg or .jpeg file extension</li>
+                    <li>Named after a location: "home", "train_station", "plaza", "mall", "beach", "arcade", "cat_cafe",
+                         "back_alley", "event_location"</li>
+                </ul>
+                <li>Place images in SD:\config\netpass\background\ (create the folder if it doesn't exist)</li>
+            </ol>
         </section>
         <section id="moderation-reporting">
             <h2>Moderation and Reporting</h2>
@@ -213,21 +224,17 @@
         <section id="known-errors">
             <h2>Known Errors</h2>
             <h3>“libCURL error 6: Couldn&#39;t resolve host name”</h3>
-            <p>You might not be connected to the internet. Make sure wireless is turned on and that you’re connected to
-                a wi-fi signal; wait until the connection is confirmed to be working before entering the app (the
-                internet icon should be blue).</p>
+            <p>Make sure wireless is turned on and that you’re connected to a Wi-Fi signal; wait until the connection
+                 is confirmed to be working before entering the app (the internet icon should be blue).</p>
             <h3>“libCURL error 28: Timeout was reached”</h3>
             <p>Try opening NetPass again, or try a different network; yours might be unstable/too slow. This error
                 could also mean that the server is down; if that’s the case, try again later.</p>
             <h3>“libCURL error 60: Make sure that your system’s date and time are set correctly!”</h3>
-            <p>Like the error says, make sure the date and time on your console is correct.</p>
-            <ol>
-                <li>Open the Rosalina menu (L + DPAD Down + SELECT at the same time).</li>
-                <li>Go to Miscellaneous options.</li>
-                <li>Click on &quot;update the time via NTP&quot; (you need an internet connection to do this) and use
-                    the DPAD Left/Right to change your hour offset; press A, and your clock should be set up
-                    correctly.</li>
-            </ol>
+            <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">this guide</a>.</p>
+            <h3>“MusicNotInitiated (19) - The music module has not been initialised yet.”</h3>
+            <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">this guide</a>.</p>
+            <h3>“NotAgreeEula (108) - User has not agreed to the EULA”</h3>
+            <p>Use <a href="https://github.com/noirscape/dses/releases/latest">Dead Simple EULA Set</a>.</p>
             <h3>“HTTP 403: Forbidden”</h3>
             <p>The server is refusing the request from your console.</p>
             <p>You are most likely banned; there should be a reason on the bottom screen as to why you were banned. If
@@ -241,6 +248,24 @@
                 StreetPass enabled.</p>
             <h2>If you get an error that is not listed here:</h2>
             <p>Please ask for help in our Discord&#39;s support channels.</p>
+        </section>
+        <section id="known issues">
+            <h2>Known Issues</h2>
+            <h3>Not receiving passes for a specific title anymore</h3>
+            <p>Please check the following:</p>
+            <ul>
+                <li>Is StreetPass enabled in that title?</li>
+                <ul>
+                    <li>Check System Settings → Data Management → StreetPass Management</li>
+                    <li>Check NetPass → Settings → Toggle Games</li>
+                </ul>
+                <li>Do you already have a full queue in that title?</li>
+                <ul>
+                    <li>NetPass can only download more StreetPasses once you make room by using the already present ones</li>
+                </ul>
+            </ul>
+            <h3>I cannot send SwapNote letters to my friends</h3>
+            <p>That feature depends on SpotPass, which got discontinued by Nintendo. NetPass only works with StreetPass.</p>
         </section>
         </main>
     <footer>
