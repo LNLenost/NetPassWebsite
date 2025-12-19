@@ -125,7 +125,6 @@
             <h3>Can I get more than 6 passes per day?</h3>
             <p>Normally no.</p>
         </section>
-
         <section id="settings">
             <h2>Settings</h2>
             <h3>What does the QR code scanner do?</h3>
@@ -135,44 +134,46 @@
                 inner camera being an option as well.)
             <p>This QR code scanner is used for:</p>
             <ul>
-                <li><strong>Logging into the NetPass website for the first time</strong>. This connects your console to your account
-                     which allows you to receive <a href="#donating">donation perks</a>. You can set up alternative
-                      login options via Reddit, Gitlab or Discord after that.</li>
-                <li><strong>Receiving specific StreetPasses</strong>. Note that this will be a one-sided StreetPass download, so the
-                     QR code creator won't receive your StreetPass. A guide to create such QR codes yourself to spread your StreetPass
-                      data is provided further down.</li>
-                <li><strong>Joining time-limited event locations</strong>. From time to time special event locations will be accessible
-                     via a QR code, generally offering more StreetPasses than regular locations. There's no schedule for when these
-                      locations will appear, or where the QR codes will be shared. Please refrain from asking/demanding for them.</li>
+                <li><strong>Logging into the NetPass website for the first time</strong>. This connects your console
+                     to your account which allows you to receive <a href="#donating">donation perks</a>. You can set
+                      up alternative login options via Reddit, Gitlab or Discord after that.</li>
+                <li><strong>Receiving specific StreetPasses</strong>. Note that this will be a one-sided StreetPass
+                     download, so the QR code creator won't receive your StreetPass. A guide to create such QR codes
+                      yourself to spread your StreetPass data is provided further down.</li>
+                <li><strong>Joining time-limited event locations</strong>. From time to time special event locations
+                     will be accessible via a QR code, generally offering more StreetPasses than regular locations.
+                      There's no schedule for when these locations will appear, or where the QR codes will be shared.
+                       Please refrain from asking/demanding for them.</li>
             </ul>
-
             <h3>Create a QR code to download a specific StreetPass</h3>
             <ol>
-                <li>Install the <strong>CEC Tool</strong> (See <a 
-                    href="install.html">Installation Guide</a> for detailed install instructions (but for NetPass))</li>
+                <li>Install the <strong>CEC Tool</strong> (See <a href="install.html">Installation Guide</a> for
+                     detailed install instructions (but for NetPass))</li>
                     <ul>
                         <li>Universal Updater: Search for "CEC Tool"</li>
-                        <li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">QR code</a>
-                             for remote installation</li>
+                        <li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png"
+                            >QR code</a> for remote installation</li>
                         <li>Manual: Use the latest <a
-                            href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a> release</li>
+                            href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a>
+                             release</li>
                     </ul>
-                <li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file</strong></li>
-                <li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to a website
-                     with "Let's Encrypt" HTTPS certification</li>
+                <li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file
+                </strong></li>
+                <li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to
+                     a website with "Let's Encrypt" HTTPS certification</li>
                     <ul>
                         <li><a href="https://catbox.moe/">Catbox</a> works as an example</li>
                     </ul>
                 <li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR generator</a> specifically</li>
                     <ul>
-                        <li>The URL needs to directly download the file when opened, it doesn't work if it leads to a page
-                             with a download button!</li>
+                        <li>The URL needs to directly download the file when opened, it doesn't work if it leads to
+                             a page with a download button!</li>
                     </ul>
                 <li>Scan the QR code with NetPass</li>
             </ol>
             <h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
             <p>The Integrations option you see under your settings is meant for configuring 3rd party services. At the
-                moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
+                 moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
             <p>With the Pretendo integration, NetPass is able to download passes from your Pretendo friends list and
                 distribute them as if they came from NetPass. Otherwise, with this integration toggled off, NetPass SPR
                 will block Pretendo SPR passes.</p>
@@ -193,30 +194,30 @@
         <section id="moderation-reporting">
             <h2>Moderation and Reporting</h2>
             <h3>How do I report unwanted/inappropriate content?</h3>
-            <p>If you found something that breaks one of our <a href="https://netpass.cafe/rules.html">Rules</a>, or believe
-                 you found something harmful not yet covered by our rules you can send a report using the following steps:</p>
+            <p>If you found something that breaks one of our <a href="https://netpass.cafe/rules.html">Rules</a>, or
+                 believe you found something harmful not yet covered by our rules you can send a report using the
+                  following steps:</p>
             <ol>
                 <li>In your in-app settings, there should be a report button.</li>
                 <li>On the report screen, you can scroll and choose who to report. Clicking on a name will show the
                     offender’s name and associated StreetPass Data (including a preview of their SwapNote
                     drawing).</li>
                 <ul>
-                    <li>This will NOT YET send the report! You can safely check the data and back out by pressing B if it's 
-                        the wrong person.</li>
+                    <li>This will NOT YET send the report! You can safely check the data and back out by pressing B
+                         if it's the wrong person.</li>
                 </ul>
                 <li>Once you have selected the offender, click the A button to begin writing a report. Please include
                     as much context as you can fit in the text box.</li>
             </ol>
             <p>If you cancel the report at any of the above steps it will not be sent. If you submit your written
-                report it will be sent to the mod panel, which mods will validate and give punishment if necessary. All
-                reports are manually reviewed, so please avoid submitting fake reports/spam; those who do will be
-                punished.</p>
+                report it will be sent to the mod panel, which mods will validate and give punishment if necessary.
+                 All reports are manually reviewed, so please avoid submitting fake reports/spam; those who do will
+                  be punished.</p>
         </section>
-
         <section id="donating">
             <h2>Donating</h2>
-            <p>Running the NetPass servers isn't free and puts additional financial stress on the developer. Donations like
-                 these have lifted that stress and allow NetPass to continue running for the foreseeable future!</p>
+            <p>Running the NetPass servers isn't free and puts additional financial stress on the developer. Donations
+                 like these have lifted that stress and allow NetPass to continue running for the foreseeable future!</p>
             <p>As a thank you for their kindness, donators receive the option to mark their Mii as "special"!</p>
             <h3>How to donate (and mark your Mii as special)</h3>
             <ol>
@@ -230,27 +231,29 @@
             <p>Note: These options will not allow you to mark your Mii as "special"!</p>
             <ul>
                 <li>Anonymously through <a href="https://liberapay.com/Sorunome">Liberapay</a></li>
-                <li>Using your Twitch "Prime Sub" (gained by <a href="https://www.twitch.tv/prime">linking an Amazon Prime subscription to Twitch</a>)
-                     to subscribe to the <a href="https://twitch.tv/sorunome">developer's Twitch channel</a></li>
+                <li>Using your Twitch "Prime Sub" (gained by <a href="https://www.twitch.tv/prime">linking an Amazon
+                     Prime subscription to Twitch</a>) to subscribe to the <a href="https://twitch.tv/sorunome">
+                        developer's Twitch channel</a></li>
                 <ul>
                     <li>Note that you have to resubscribe every month as it doesn't auto-extend</li>
                 </ul>
             </ul>
             <h2>Related Questions</h2>
             <h3>What is a "special" Mii?</h3>
-            <p>Special Miis were Miis that were distributed by Nintendo over SpotPass. They wear golden pants and grant certain
-                 benefits in StreetPass Mii Plaza minigames to players who meet them.</p>
+            <p>Special Miis were Miis that were distributed by Nintendo over SpotPass. They wear golden pants and
+                 grant certain benefits in StreetPass Mii Plaza minigames to players who meet them.</p>
             <h3>Do I have to make my Mii special with SpecializeMii?</h3>
-            <p>The NetPass server modifies your StreetPass data to change the special status of your Mii. As such, homebrews
-                 like SpecializeMii have zero effect. To change your special status, please log back into the website and adjust
-                  your settings.</p>
+            <p>The NetPass server modifies your StreetPass data to change the special status of your Mii. As such,
+                 homebrews like SpecializeMii have zero effect. To change your special status, please log back into
+                  the website and adjust your settings.</p>
             <h3>How many consoles can I connect?</h3>
-            <p>You can add as many consoles as you'd like and they will all get the option to send their Mii as a special one!</p>
+            <p>You can add as many consoles as you'd like and they will all get the option to send their Mii as a
+                 special one!</p>
             <h3>Why lock special Miis behind a paywall?</h3>
-            <p>The goal of NetPass has always been to restore StreetPass in a way that felt natural. Special Miis are supposed to
-                 feel special, rare even. You should be excited when meeting one. This compromise allows special Miis to continue
-                  to exist while not overflooding everyone with them. Additionally, it helps to fund the costs of the server that
-                   NetPass relies on!</p>
+            <p>The goal of NetPass has always been to restore StreetPass in a way that felt natural. Special Miis
+                 are supposed to feel special, rare even. You should be excited when meeting one. This compromise
+                  allows special Miis to continue to exist while not overflooding everyone with them. Additionally,
+                   it helps to fund the costs of the server that NetPass relies on!</p>
         </section>
         <section id="known-errors">
             <h2>Known Errors</h2>
@@ -273,19 +276,20 @@
                 <li>Restart your 3DS</li>
             </ul>
             <h3>“MusicNotInitiated (19) - The music module has not been initialised yet.”</h3>
-            <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">this guide</a>.</p>
+            <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">
+                this guide</a>.</p>
             <h3>“NotAgreeEula (108) - User has not agreed to the EULA”</h3>
             <p>Use <a href="https://github.com/noirscape/dses/releases/latest">Dead Simple EULA Set</a>.</p>
             <h3>“HTTP 403: Forbidden”</h3>
             <p>The server is refusing the request from your console.</p>
-            <p>You are most likely banned. Please use a recent version of NetPass in order to see the infraction, time of ban and time of unban
-                 on the top screen. If you do not get a ban message, or have questions surrounding your ban, please open a ticket our
-                  Discord&#39;s Mod Mail channel.</p>
+            <p>You are most likely banned. Please use a recent version of NetPass in order to see the infraction,
+                 time of ban and time of unban on the top screen. If you do not get a ban message, or have questions
+                  surrounding your ban, please open a ticket our Discord&#39;s Mod Mail channel.</p>
             <p>Using an emulator can also cause this error, see <a href="#faq">General Questions</a>.</p>
             <h3>“409: Failed to enter location”</h3>
             <p>Either the Netpass on your console is outdated, or you don&#39;t have StreetPass enabled on any game.
                 Make sure you <a href="install.html">install the latest version,</a> and have at least 1 game with
-                StreetPass enabled.</p>
+                 StreetPass enabled.</p>
             <h2>If you get an error that is not listed here:</h2>
             <p>Please ask for help in our Discord&#39;s support channels.</p>
         </section>
@@ -301,11 +305,13 @@
                 </ul>
                 <li>Do you already have a full queue in that title? (Check Home Menu → Notifications)</li>
                 <ul>
-                    <li>NetPass can only download more StreetPasses once you make room by using the already present ones</li>
+                    <li>NetPass can only download more StreetPasses once you make room by using the already
+                         present ones</li>
                 </ul>
             </ul>
             <h3>I cannot send SwapNote letters to my friends</h3>
-            <p>That feature depends on SpotPass, which got discontinued by Nintendo. NetPass only works with StreetPass.</p>
+            <p>That feature depends on SpotPass, which got discontinued by Nintendo. NetPass only works with
+                 StreetPass.</p>
         </section>
         </main>
     <footer>
