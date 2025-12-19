@@ -48,8 +48,8 @@
                     option.</li>
             </ul>
         </section>
-        <section id="faq2">
-            <h2>Frequently Asked Questions</h2>
+        <section id="faq">
+            <h2>General Questions</h2>
             <h3>What is SPR?</h3>
             <p>SPR stands for StreetPass Relay, which is a feature that allows your 3DS to download StreetPasses in the
                 background while you keep it on idle or play your games.</p>
@@ -261,18 +261,27 @@
             <p>Try opening NetPass again, or try a different network; yours might be unstable/too slow. This error
                 could also mean that the server is down; if that’s the case, try again later.</p>
             <h3>“libCURL error 60: Make sure that your system’s date and time are set correctly!”</h3>
-            <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">this guide</a>.</p>
+            <p>Make sure Date and Time on your console is correct</p>
+            <ul>
+                <li>Open the Rosalina menu (L + DPAD Down + SELECT)</li>
+                <li>Go to Miscellaneous options</li>
+                <li>Select 'Update time and date via NTP' (You need an internet connection to do this)</li>
+                <li>Use DPAD Left/Right to change your hour offset</li>
+                <li>Press A to update the time and date of your 3DS</li>
+                <li>Press B to return to the Miscellaneous options menu</li>
+                <li>Select 'Nullify user time offset'</li>
+                <li>Restart your 3DS</li>
+            </ul>
             <h3>“MusicNotInitiated (19) - The music module has not been initialised yet.”</h3>
             <p>Follow Section III of <a href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">this guide</a>.</p>
             <h3>“NotAgreeEula (108) - User has not agreed to the EULA”</h3>
             <p>Use <a href="https://github.com/noirscape/dses/releases/latest">Dead Simple EULA Set</a>.</p>
             <h3>“HTTP 403: Forbidden”</h3>
             <p>The server is refusing the request from your console.</p>
-            <p>You are most likely banned; there should be a reason on the bottom screen as to why you were banned. If
-                you don&#39;t see a reason for your ban, or want to know the length of said ban, please open a ticket
-                in our Discord&#39;s Mod Mail channel.</p>
-            <p>Using an emulator can also cause this error or error HTTP 400; emulators are not officially supported,
-                and we cannot help you.</p>
+            <p>You are most likely banned. Please use a recent version of NetPass in order to see the infraction, time of ban and time of unban
+                 on the top screen. If you do not get a ban message, or have questions surrounding your ban, please open a ticket our
+                  Discord&#39;s Mod Mail channel.</p>
+            <p>Using an emulator can also cause this error, see <a href="#faq">General Questions</a>.</p>
             <h3>“409: Failed to enter location”</h3>
             <p>Either the Netpass on your console is outdated, or you don&#39;t have StreetPass enabled on any game.
                 Make sure you <a href="install.html">install the latest version,</a> and have at least 1 game with
@@ -290,7 +299,7 @@
                     <li>Check System Settings → Data Management → StreetPass Management</li>
                     <li>Check NetPass → Settings → Toggle Games</li>
                 </ul>
-                <li>Do you already have a full queue in that title?</li>
+                <li>Do you already have a full queue in that title? (Check Home Menu → Notifications)</li>
                 <ul>
                     <li>NetPass can only download more StreetPasses once you make room by using the already present ones</li>
                 </ul>
