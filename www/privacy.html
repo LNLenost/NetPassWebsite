@@ -41,7 +41,7 @@ These cookies are cookies that are used during authentication to prevent an atta
 <p><strong>Identifying bits:</strong><br>
 To identify the console connecting to NetPass, we store the consoles mac address together with a console-unique hash consisting out of the <a href="https://www.3dbrew.org/wiki/AM:GetDeviceId">device id</a> and the mac. While the mac is stored in plain text, it does not seem feasible to do otherwise, as throughout the StreetPass protocol the mac address of a user appears in the transmitted payloads frequently.<br>
 For background collection of passes to work, we also store the BOSS UID, as that is needed to identify the console when doing StreetPass-Relay requests. These identifying bits are stored indefinitely.<br>
-For some integrations to work, we additionally store your friends code. This friends code is not shared with third-party services; you will have to supply your friends code to the other service somehow, if it needs that.</p>
+For some integrations to work, we additionally store your friends code and local friends code seed, in addition to the user-agent sent via background requests. The user-agent contains the former two. These bits are needed to authenticate yourself against the third-party service.</p>
 
 <p><strong>Outbox:</strong><br>
 The outbox contains all the messages that your console is trying to send to others via NetPass. These messages, together with a list of which titles are activated, and the capacity of messages on the console itself all make up the outbox data. This data is stored for up to 30 days.</p>
