@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetPass - Errors & Issues</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon_netpass.png" type="image/png">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/netpasslogo.png" alt="NetPass' logo">
+        </div>
+    </header>
+
+	<div class="flexreturn">
+		<a class="navbarbutton returnrounded" href="index.html"><div class="textcentermid">Return Home</div></a>
+	</div>
+
+    </header>
+    <main>
+        <section id="guide">
+            <h2>Guide → Errors & Issues</h2>
+            <ul>
+                <li><a href="install.html">Installation</a></li>
+                <li><a href="general_questions.html">General Questions</a></li>
+                <li><a href="back_alley.html">Back Alley</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="moderation_and_reporting.html">Moderation & Reporting</a></li>
+                <li><a href="donating.html">Donating</a></li>
+                <li><strong>Errors & Issues</strong></li>
+            </ul>
+        </section>
+        <section id="known-errors">
+            <h2>Known Errors</h2>
+            <h3>“libCURL error 6: Couldn&#39;t resolve host name”</h3>
+            <p>Make sure wireless is turned on and that you’re connected to a Wi-Fi signal; wait until the connection
+                 is confirmed to be working before entering the app (the internet icon should be blue).</p>
+            <h3>“libCURL error 28: Timeout was reached”</h3>
+            <p>Try opening NetPass again, or try a different network; yours might be unstable/too slow. This error
+                could also mean that the server is down; if that’s the case, try again later.</p>
+            <h3>“libCURL error 60: Make sure that your system’s date and time are set correctly!”</h3>
+            <p>Make sure Date and Time on your console are correct</p>
+            <ul>
+                <li>Open the Rosalina menu (L + DPAD Down + SELECT)</li>
+                <li>Go to Miscellaneous options</li>
+                <li>Select 'Update time and date via NTP' (You need an internet connection to do this)</li>
+                <li>Use DPAD Left/Right to change your hour offset</li>
+                <li>Press A to update the time and date of your 3DS</li>
+                <li>Press B to return to the Miscellaneous options menu</li>
+                <li>Select 'Nullify user time offset'</li>
+                <li>Restart your 3DS</li>
+            </ul>
+            <h3>“MusicNotInitiated (19) - The music module has not been initialised yet.”</h3>
+            <p>Follow Section III of <a
+                 href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">
+                  this guide</a>.</p>
+            <h3>“NotAgreeEula (108) - User has not agreed to the EULA”</h3>
+            <p>Use <a href="https://github.com/noirscape/dses/releases/latest">Dead Simple EULA Set</a>.</p>
+            <h3>“HTTP 403: Forbidden”</h3>
+            <p>The server is refusing the request from your console.</p>
+            <p>You are most likely banned. Please use a recent version of NetPass in order to see the infraction,
+                 time of ban and time of unban on the top screen. If you do not get a ban message, or have questions
+                  surrounding your ban, please open a ticket our Discord&#39;s Mod Mail channel.</p>
+            <p>Using an emulator can also cause this error, see <a href="general_questions.html">General Questions</a>
+                .</p>
+            <h3>“409: Failed to enter location”</h3>
+            <p>Either the Netpass on your console is outdated, or you don&#39;t have StreetPass enabled on any game.
+                Make sure you <a href="install.html">install the latest version,</a> and have at least 1 game with
+                 StreetPass enabled.</p>
+            <h2>If you get an error that is not listed here:</h2>
+            <p>Please ask for help in our Discord&#39;s support channels.</p>
+        </section>
+        <section id="known-issues">
+            <h2>Known Issues</h2>
+            <h3>Not receiving passes for a specific title anymore</h3>
+            <p>Please check the following:</p>
+            <ul>
+                <li>Is StreetPass enabled in that title?</li>
+                <ul>
+                    <li>Check System Settings → Data Management → StreetPass Management</li>
+                    <li>Check NetPass → Settings → Toggle Games</li>
+                </ul>
+                <li>Do you already have a full queue in that title? (Check Home Menu → Notifications)</li>
+                <ul>
+                    <li>NetPass can only download more StreetPasses once you make room by using the already
+                         present ones</li>
+                </ul>
+            </ul>
+            <h3>I cannot send SwapNote letters to my friends</h3>
+            <p>That feature depends on SpotPass, which got discontinued by Nintendo. NetPass only works with
+                 StreetPass.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024-2025 NetPass, by <a href="https://sorunome.de">Sorunome</a></p>Site by <a
+            href="https://github.com/LNLenost">LNLenost</a>, <a href="https://github.com/iveurne">iveurne</a> &amp; <a
+            href="https://github.com/Gatokun">Gato-kun</a></p>
+        <a href="https://gitlab.com/3ds-NetPass/NetPass-Website">Website Source Code</a>, <a
+            href="privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
