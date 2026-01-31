@@ -2,113 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetPass - Settings</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon_netpass.png" type="image/png">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NetPass - Settings</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="assets/favicon_netpass.png" type="image/png">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/netpasslogo.png" alt="NetPass' logo">
-        </div>
-    </header>
+	<header>
+		<div class="logo">
+			<img src="assets/netpasslogo.png" alt="NetPass' logo">
+		</div>
+	</header>
 
 	<div class="flexreturn">
 		<a class="navbarbutton returnrounded" href="index.html"><div class="textcentermid">Return Home</div></a>
 	</div>
 
-    </header>
-    <main>
-        <section id="guide">
-            <h2>Guide → Settings</h2>
-            <ul>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="general_questions.html">General Questions</a></li>
-                <li><a href="back_alley.html">Back Alley</a></li>
-                <li><strong>Settings</strong></li>
-                <li><a href="moderation_and_reporting.html">Moderation & Reporting</a></li>
-                <li><a href="donating.html">Donating</a></li>
-                <li><a href="errors_and_issues.html">Errors & Issues</a></li>
-                <li><a href="additional_guides_and_resources.html">Additional Guides & Resources</a></li>
-            </ul>
-        </section>
-        <section id="settings">
-            <h2>Settings</h2>
-            <h3>What does the QR code scanner do?</h3>
-            <p>For clarification, this feature is not related to the remote installation process seen in the <a
-                href="installation.html">Installation Guide</a>.</p>
-            <p>The "Scan QR Code" option in the NetPass settings will activate the outer camera on your 3DS (with the
-                inner camera being an option as well.)
-            <p>This QR code scanner is used for:</p>
-            <ul>
-                <li><strong>Logging into the NetPass website for the first time</strong>. This connects your console
-                    to your account which allows you to receive <a href="donating.html">donation perks</a>. You can set
-                    up alternative login options via Reddit, Gitlab or Discord after that.</li>
-                <li><strong>Receiving specific StreetPasses</strong>. Note that this will be a one-sided StreetPass
-                    download, so the QR code creator won't receive your StreetPass. A guide to create such QR codes
-                    yourself to spread your StreetPass data is provided further down.</li>
-                <li><strong>Joining time-limited event locations</strong>. From time to time special event locations
-                    will be accessible via a QR code, generally offering more StreetPasses than regular locations.
-                    There's no schedule for when these locations will appear, or where the QR codes will be shared.
-                    Please refrain from asking/demanding for them.</li>
-            </ul>
-            <h3>Create a QR code to download a specific StreetPass</h3>
-            <ol>
-                <li>Install the <strong>CEC Tool</strong> (See <a href="installation.html">Installation Guide</a> for
-                    detailed install instructions (but for NetPass))</li>
-                    <ul>
-                        <li>Universal Updater: Search for "CEC Tool"</li>
-                        <li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">
-                            QR code</a> for remote installation</li>
-                        <li>Manual: Use the latest <a
-                            href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a>
-                            release</li>
-                    </ul>
-                <li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file
-                </strong></li>
-                <li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to
-                    a website with "Let's Encrypt" HTTPS certification</li>
-                    <ul>
-                        <li><a href="https://catbox.moe/">Catbox</a> works as an example</li>
-                    </ul>
-                <li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR generator</a> specifically</li>
-                    <ul>
-                        <li>The URL needs to directly download the file when opened, it doesn't work if it leads to
-                            a page with a download button!</li>
-                    </ul>
-                <li>Scan the QR code with NetPass</li>
-            </ol>
-            <h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
-            <p>The Integrations option you see under your settings is meant for configuring 3rd party services. At the
-                moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
-            <p>With the Pretendo integration, NetPass is able to download passes from your Pretendo friends list and
-                distribute them as if they came from NetPass. Otherwise, with this integration toggled off, NetPass SPR
-                will block Pretendo SPR passes.</p>
-            <p>As a final disclaimer, third party integrations are outside of NetPass moderation and should be used at
-                your own risk.</p>
-            <h3>Custom NetPass Backgrounds</h3>
-            <ol>
-                <li>Prepare location images</li>
-                <ul>
-                    <li>400x240 pixels</li>
-                    <li>.png .jpg or .jpeg file extension</li>
-                    <li>Named after a location: "home", "train_station", "plaza", "mall", "beach", "arcade",
-                        "cat_cafe", "back_alley", "event_location"</li>
-                </ul>
-                <li>Place images in SD:\config\netpass\background\ (create the folder if it doesn't exist)</li>
-            </ol>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024-2025 NetPass, by <a href="https://sorunome.de">Sorunome</a></p>Site by <a
-            href="https://github.com/LNLenost">LNLenost</a>, <a href="https://github.com/iveurne">iveurne</a> &amp; <a
-            href="https://github.com/Gatokun">Gato-kun</a></p>
-        <a href="https://gitlab.com/3ds-NetPass/NetPass-Website">Website Source Code</a>, <a
-            href="privacy.html">Privacy Policy</a>
-    </footer>
+	</header>
+	<main>
+		<section id="guide">
+			<h2>Guide → Settings</h2>
+			<ul>
+				<li><a href="installation.html">Installation</a></li>
+				<li><a href="general_questions.html">General Questions</a></li>
+				<li><a href="back_alley.html">Back Alley</a></li>
+				<li><strong>Settings</strong></li>
+				<li><a href="moderation_and_reporting.html">Moderation & Reporting</a></li>
+				<li><a href="donating.html">Donating</a></li>
+				<li><a href="errors_and_issues.html">Errors & Issues</a></li>
+				<li><a href="additional_guides_and_resources.html">Additional Guides & Resources</a></li>
+			</ul>
+		</section>
+		<section id="settings">
+			<h2>Settings</h2>
+			<h3>What does the QR code scanner do?</h3>
+			<p>For clarification, this feature is not related to the remote installation process seen in the <a
+				href="installation.html">Installation Guide</a>.</p>
+			<p>The "Scan QR Code" option in the NetPass settings will activate the outer camera on your 3DS (with the
+				inner camera being an option as well.)
+			<p>This QR code scanner is used for:</p>
+			<ul>
+				<li><strong>Logging into the NetPass website for the first time</strong>. This connects your console
+					to your account which allows you to receive <a href="donating.html">donation perks</a>. You can set
+					up alternative login options via Reddit, Gitlab or Discord after that.</li>
+				<li><strong>Receiving specific StreetPasses</strong>. Note that this will be a one-sided StreetPass
+					download, so the QR code creator won't receive your StreetPass. A guide to create such QR codes
+					yourself to spread your StreetPass data is provided further down.</li>
+				<li><strong>Joining time-limited event locations</strong>. From time to time special event locations
+					will be accessible via a QR code, generally offering more StreetPasses than regular locations.
+					There's no schedule for when these locations will appear, or where the QR codes will be shared.
+					Please refrain from asking/demanding for them.</li>
+			</ul>
+			<h3>Create a QR code to download a specific StreetPass</h3>
+			<ol>
+				<li>Install the <strong>CEC Tool</strong> (See <a href="installation.html">Installation Guide</a> for
+					detailed install instructions (but for NetPass))</li>
+					<ul>
+						<li>Universal Updater: Search for "CEC Tool"</li>
+						<li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">
+							QR code</a> for remote installation</li>
+						<li>Manual: Use the latest <a
+							href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a>
+							release</li>
+					</ul>
+				<li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file
+				</strong></li>
+				<li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to
+					a website with "Let's Encrypt" HTTPS certification</li>
+					<ul>
+						<li><a href="https://catbox.moe/">Catbox</a> works as an example</li>
+					</ul>
+				<li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR generator</a> specifically</li>
+					<ul>
+						<li>The URL needs to directly download the file when opened, it doesn't work if it leads to
+							a page with a download button!</li>
+					</ul>
+				<li>Scan the QR code with NetPass</li>
+			</ol>
+			<h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
+			<p>The Integrations option you see under your settings is meant for configuring 3rd party services. At the
+				moment, NetPass only offers a Pretendo integration that adds compatibility to Pretendo's SPR.</p>
+			<p>With the Pretendo integration, NetPass is able to download passes from your Pretendo friends list and
+				distribute them as if they came from NetPass. Otherwise, with this integration toggled off, NetPass SPR
+				will block Pretendo SPR passes.</p>
+			<p>As a final disclaimer, third party integrations are outside of NetPass moderation and should be used at
+				your own risk.</p>
+			<h3>Custom NetPass Backgrounds</h3>
+			<ol>
+				<li>Prepare location images</li>
+				<ul>
+					<li>400x240 pixels</li>
+					<li>.png .jpg or .jpeg file extension</li>
+					<li>Named after a location: "home", "train_station", "plaza", "mall", "beach", "arcade",
+						"cat_cafe", "back_alley", "event_location"</li>
+				</ul>
+				<li>Place images in SD:\config\netpass\background\ (create the folder if it doesn't exist)</li>
+			</ol>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024-2025 NetPass, by <a href="https://sorunome.de">Sorunome</a></p>Site by <a
+			href="https://github.com/LNLenost">LNLenost</a>, <a href="https://github.com/iveurne">iveurne</a> &amp; <a
+			href="https://github.com/Gatokun">Gato-kun</a></p>
+		<a href="https://gitlab.com/3ds-NetPass/NetPass-Website">Website Source Code</a>, <a
+			href="privacy.html">Privacy Policy</a>
+	</footer>
 </body>
 </html>

@@ -107,13 +107,13 @@ form.addEventListener("submit", (e) => {
 		bufferWriteString(buffer, name); // name of the event location
 		bufferWriteBuffer(buffer, Uint8Array.fromHex(uuid.trim().split("-").join("")));
 	}
-	
+
 
 	const bytes = bufferFinalise(buffer);
 	new QRCode.toDataURL([{data: bytes, mode: "bytes"}], { errorCorrectionLevel: "L" }, (err, url) => {
 		document.getElementById("qr-image").src = url;
 	});
-	
+
 	return false;
 });
 

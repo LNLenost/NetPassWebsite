@@ -1,5 +1,5 @@
 function escapeHtml(s) {
-	if (typeof s !== 'string') { 
+	if (typeof s !== 'string') {
 		s = s.toString();
 	}
 	return s.replace(/&/g, "&amp;")
@@ -79,7 +79,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 		doRequest("PUT", `${BASE_URL}/account/me/username`, { username }, reload, reload);
 		return false;
 	});
-	
+
 	// build the current role and subscriptions stuffs
 	document.getElementById("current-role").innerText = getRole(account_data.permission).name;
 	doRequest("GET", `${BASE_URL}/subscriptions`, null, (text) => {
@@ -116,7 +116,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			}
 		});
 	});
-	
+
 	// build the console html
 	let html = "";
 	let i = 0;
@@ -167,7 +167,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			mac_element.outerHTML = `<span class="mac-address">${escapeHtml(mac)}</span>`;
 		});
 	}
-	
+
 	// add new console callback
 	document.getElementById("link_new_console").addEventListener("click", (e) => {
 		e.preventDefault();
@@ -176,7 +176,7 @@ doRequest("GET", `${BASE_URL}/account/me`, null, (text) => {
 			location.replace(data.methods[0].url);
 		});
 	});
-	
+
 	// build the 3pid html
 	doRequest("GET", `${BASE_URL}/auth/methods/add_third_party`, null, (text) => {
 		const data = JSON.parse(text);
