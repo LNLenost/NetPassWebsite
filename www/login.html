@@ -10,21 +10,22 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="assets/netpasslogo.png" alt="NetPass' logo">
+			<img src="assets/netpasslogo.png" alt="NetPass logo">
 		</div>
 	</header>
 
-	<div class="flexreturn" style="margin-bottom:20px;">
+	<div class="flexreturn">
 		<a class="navbarbutton returnrounded" href="index.html"><div class="textcentermid">Return Home</div></a>
 	</div>
 
-	<section id="login">
-		<h2>Login</h2>
-		<p>Chose a method to log in with</p>
-		<ul id="login_methods"></ul>
-	</section>
-<script type="application/javascript">
+	<main>
+		<section id="login">
+			<h2>Login</h2>
+			<p>Chose a method to log in with</p>
+			<ul id="login_methods"></ul>
+		</section>
 
+		<script>
 function escapeHtml(s) {
 	return s.replace(/&/g, "&amp;")
 		.replace(/</g, "&lt;")
@@ -45,6 +46,7 @@ xmlHttp.onreadystatechange = () => {
 };
 xmlHttp.open("GET", "https://api.netpass.cafe/auth/methods/login", true);
 xmlHttp.send(null);
-</script>
+		</script>
+	</main>
 </body>
 </html>

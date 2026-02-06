@@ -6,41 +6,43 @@
 	<title>NetPass - QR Generator</title>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="assets/favicon_netpass.png" type="image/png">
-	<script type="application/javascript" defer src="qrcode.js"></script>
+	<script src="qrcode.js" defer></script>
 </head>
 <body>
 	<header>
 		<div class="logo">
-			<img src="assets/netpasslogo.png" alt="NetPass' logo">
+			<img src="assets/netpasslogo.png" alt="NetPass logo">
 		</div>
 	</header>
-		<nav>
-		<ul>
-			<li><a href="./">Go Back</a></li>
-		</ul>
-	</nav>
-	<section>
-		<h2>QR Generator</h2>
-		<p>Generate various qr cods for usage with NetPass</p>
-		<img id="qr-image"></img>
-		<form id="qr-data">
-			<select required name="type" size="1">
-				<option value="dl-pass" selected>Generate an HTTP QR code to download a pass</option>
-				<option value="join-event-location">Join an event location</option>
-			</select>
-			<div class="qr-form-values join-event-location">
-				<label for="name">Name: </label><input type="text" name="name" /><br>
-				<label for="uuid">Uuid </label><input type="text" name="uuid" /><br>
-			</div>
-			<div class="qr-form-values dl-pass">
-				<label for="url">URL: </label><input type="text" name="url" /><br>
-			</div>
-			<input type="submit" value="Generate QR Code" />
-		</form>
-		<p>Powered by <a href="https://github.com/soldair/node-qrcode" target="_blank">node-qrcode</a></p>
-	</section>
-<script type="application/javascript">
 
+	<div class="flexreturn">
+		<a class="navbarbutton returnrounded" href="index.html"><div class="textcentermid">Return Home</div></a>
+	</div>
+
+	<main>
+		<section>
+			<h2>QR Generator</h2>
+			<p>Generate various qr codes for usage with NetPass</p>
+			<!-- html-validate-disable-next element-required-attributes: src is added via JavaScript -->
+			<img id="qr-image" alt="">
+			<form id="qr-data">
+				<select required name="type" size="1">
+					<option value="dl-pass" selected>Generate an HTTP QR code to download a pass</option>
+					<option value="join-event-location">Join an event location</option>
+				</select>
+				<div class="qr-form-values join-event-location">
+					<label for="name">Name: </label><input type="text" name="name"><br>
+					<label for="uuid">Uuid </label><input type="text" name="uuid"><br>
+				</div>
+				<div class="qr-form-values dl-pass">
+					<label for="url">URL: </label><input type="text" name="url"><br>
+				</div>
+				<button type="submit" class="btn">Generate QR Code</button>
+			</form>
+			<p>Powered by <a href="https://github.com/soldair/node-qrcode" target="_blank">node-qrcode</a></p>
+		</section>
+
+		<script>
 function newBuffer(capacity) {
 	return {
 		cursor: 0,
@@ -108,7 +110,6 @@ form.addEventListener("submit", (e) => {
 		bufferWriteBuffer(buffer, Uint8Array.fromHex(uuid.trim().split("-").join("")));
 	}
 
-
 	const bytes = bufferFinalise(buffer);
 	new QRCode.toDataURL([{data: bytes, mode: "bytes"}], { errorCorrectionLevel: "L" }, (err, url) => {
 		document.getElementById("qr-image").src = url;
@@ -116,7 +117,7 @@ form.addEventListener("submit", (e) => {
 
 	return false;
 });
-
-</script>
+		</script>
+	</main>
 </body>
 </html>

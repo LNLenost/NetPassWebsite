@@ -13,7 +13,7 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="assets/netpasslogo.png" alt="NetPass' logo">
+			<img src="assets/netpasslogo.png" alt="NetPass logo">
 		</div>
 	</header>
 
@@ -21,7 +21,6 @@
 		<a class="navbarbutton returnrounded" href="index.html"><div class="textcentermid">Return Home</div></a>
 	</div>
 
-	</header>
 	<main>
 		<section id="guide">
 			<h2>Guide → Settings</h2>
@@ -30,10 +29,10 @@
 				<li><a href="general_questions.html">General Questions</a></li>
 				<li><a href="back_alley.html">Back Alley</a></li>
 				<li><strong>Settings</strong></li>
-				<li><a href="moderation_and_reporting.html">Moderation & Reporting</a></li>
+				<li><a href="moderation_and_reporting.html">Moderation &amp; Reporting</a></li>
 				<li><a href="donating.html">Donating</a></li>
-				<li><a href="errors_and_issues.html">Errors & Issues</a></li>
-				<li><a href="additional_guides_and_resources.html">Additional Guides & Resources</a></li>
+				<li><a href="errors_and_issues.html">Errors &amp; Issues</a></li>
+				<li><a href="additional_guides_and_resources.html">Additional Guides &amp; Resources</a></li>
 			</ul>
 		</section>
 		<section id="settings">
@@ -42,7 +41,7 @@
 			<p>For clarification, this feature is not related to the remote installation process seen in the <a
 				href="installation.html">Installation Guide</a>.</p>
 			<p>The "Scan QR Code" option in the NetPass settings will activate the outer camera on your 3DS (with the
-				inner camera being an option as well.)
+				inner camera being an option as well.)</p>
 			<p>This QR code scanner is used for:</p>
 			<ul>
 				<li><strong>Logging into the NetPass website for the first time</strong>. This connects your console
@@ -59,7 +58,7 @@
 			<h3>Create a QR code to download a specific StreetPass</h3>
 			<ol>
 				<li>Install the <strong>CEC Tool</strong> (See <a href="installation.html">Installation Guide</a> for
-					detailed install instructions (but for NetPass))</li>
+					detailed install instructions (but for NetPass))
 					<ul>
 						<li>Universal Updater: Search for "CEC Tool"</li>
 						<li>FBI: Scan the <a href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">
@@ -68,18 +67,19 @@
 							href="https://gitlab.com/sorunome/cectool/-/raw/release_builds/qr.png">CEC Tool</a>
 							release</li>
 					</ul>
+				</li>
 				<li>While in CEC Tool, select a <strong><em>Game</em> → Outbox → <em>ID</em> → Export to file
 				</strong></li>
 				<li>Grab the <strong><em>ID</em>.message.cec</strong> file from SD:\cectool\out\ and upload it to
-					a website with "Let's Encrypt" HTTPS certification</li>
-					<ul>
-						<li><a href="https://catbox.moe/">Catbox</a> works as an example</li>
-					</ul>
-				<li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR generator</a> specifically</li>
-					<ul>
-						<li>The URL needs to directly download the file when opened, it doesn't work if it leads to
-							a page with a download button!</li>
-					</ul>
+					a website with "Let's Encrypt" HTTPS certification
+					<br><i class="fa-solid fa-circle-exclamation" aria-label="Notice:" role="img"></i>
+					<a href="https://catbox.moe/">Catbox</a> works as an example
+				</li>
+				<li>Grab the URL and use this <a href="https://netpass.cafe/qr.html">QR generator</a> specifically
+					<br><i class="fa-solid fa-circle-exclamation" aria-label="Notice:" role="img"></i>
+					The URL needs to directly download the file when opened, it doesn't work if it leads to a page with
+					a download button!
+				</li>
 				<li>Scan the QR code with NetPass</li>
 			</ol>
 			<h3>What is the "Integrations" button for? What happens if I turn the Pretendo one on/off?</h3>
@@ -92,23 +92,24 @@
 				your own risk.</p>
 			<h3>Custom NetPass Backgrounds</h3>
 			<ol>
-				<li>Prepare location images</li>
-				<ul>
-					<li>400x240 pixels</li>
-					<li>.png .jpg or .jpeg file extension</li>
-					<li>Named after a location: "home", "train_station", "plaza", "mall", "beach", "arcade",
-						"cat_cafe", "back_alley", "event_location"</li>
-				</ul>
+				<li>Prepare location images
+					<ul>
+						<li>400x240 pixels</li>
+						<li>.png .jpg or .jpeg file extension</li>
+						<li>Named after a location: "home", "train_station", "plaza", "mall", "beach", "arcade",
+							"cat_cafe", "back_alley", "event_location"</li>
+					</ul>
+				</li>
 				<li>Place images in SD:\config\netpass\background\ (create the folder if it doesn't exist)</li>
 			</ol>
 		</section>
 	</main>
 	<footer>
-		<p>&copy; 2024-2026 NetPass, by <a href="https://sorunome.de">Sorunome</a></p>Site by <a
-			href="https://github.com/LNLenost">LNLenost</a>, <a href="https://github.com/iveurne">iveurne</a> &amp; <a
-			href="https://github.com/Gatokun">Gato-kun</a></p>
-		<a href="https://gitlab.com/3ds-NetPass/NetPass-Website">Website Source Code</a>, <a
-			href="privacy.html">Privacy Policy</a>
+		<p>&copy; 2024-2026 NetPass, by <a href="https://sorunome.de">Sorunome</a></p>
+		<p>Site by <a href="https://github.com/LNLenost">LNLenost</a>, <a href="https://github.com/iveurne">iveurne</a>
+			&amp; <a href="https://github.com/Gatokun">Gato-kun</a></p>
+		<p><a href="https://gitlab.com/3ds-NetPass/NetPass-Website">Website Source Code</a>, <a
+			href="privacy.html">Privacy Policy</a></p>
 	</footer>
 </body>
 </html>
