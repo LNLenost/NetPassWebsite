@@ -56,12 +56,12 @@
 					These bits are needed to authenticate yourself against the third-party service.<br>
 					For SpotPass/BOSS integration the consoles principle ID is also collected.</p>
 
-				<p><strong>Outbox:</strong><br>
+				<p><strong>StreetPass Outbox:</strong><br>
 					The outbox contains all the messages that your console is trying to send to others via NetPass.
 					These messages, together with a list of which titles are activated, and the capacity of messages on
 					the console itself all make up the outbox data. This data is stored for up to 30 days.</p>
 
-				<p><strong>Inbox:</strong><br>
+				<p><strong>StreetPass Inbox:</strong><br>
 					Similar to the outbox, the inbox contains all that the messages that your console will receive upon
 					opening NetPass. These messages are stored for up to 15 days.</p>
 
@@ -87,6 +87,14 @@
 					When a message is reported, the report reason along with the messages associated with the report are
 					stored on the server, for moderators to be able to take action, if needed. This data is stored
 					indefinitely.</p>
+
+				<p><strong>SpotPass:</strong><br>
+					SpotPass files uploaded claim an expiracy by themself. For reporting reasons, NetPass will store the
+					files for up to 30 days after that expiracy date.</p>
+
+				<p><strong>Image Share:</strong><br>
+					For the image share functionality/revivial, the images themself are kept on the server for up to two
+					minutes. After that they are automatically deleted.</p>
 
 				<p><strong>Account:</strong><br>
 					When using an account on our website, we store the data you submitted there: Your account name, the
