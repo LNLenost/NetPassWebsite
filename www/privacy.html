@@ -43,18 +43,21 @@
 				<p>We collect various bits of data to make the service work:</p>
 
 				<p><strong>Identifying bits:</strong><br>
-					To identify the console connecting to NetPass, we store the consoles mac address together with a
-					console-unique hash consisting out of the <a href="https://www.3dbrew.org/wiki/AM:GetDeviceId"
-					>device id</a> and the mac. While the mac is stored in plain text, it does not seem feasible to do
-					otherwise, as throughout the StreetPass protocol the mac address of a user appears in the
-					transmitted payloads frequently.<br>
+					To identify the console connecting to NetPass, we store the consoles mac address, a console-unique
+					hash and the <a href="https://www.3dbrew.org/wiki/CfgS:GetLocalFriendCodeSeed" target="_blank">Local
+					Friend Code Seed</a>. The console-unique hash consists out of the
+					<a href="https://www.3dbrew.org/wiki/AM:GetDeviceId" target="_blank">device id</a> and the mac.
+					While the mac is stored in plain text, it does not seem feasible to do otherwise, as throughout the
+					StreetPass protocol the mac address of a user appears in the transmitted payloads frequently. The
+					Local Friend Code Seed is also stored in plain text, as the 3DS uses it to authenticate against a
+					server in various places.<br>
 					For background collection of passes to work, we also store the BOSS UID, as that is needed to
-					identify the console when doing StreetPass-Relay requests. These identifying bits are stored
-					indefinitely.<br>
-					For some integrations to work, we additionally store your friends code and local friends code seed,
-					in addition to the user-agent sent via background requests. The user-agent contains the former two.
-					These bits are needed to authenticate yourself against the third-party service.<br>
-					For SpotPass/BOSS integration the consoles principle ID is also collected.</p>
+					identify the console when doing StreetPass-Relay requests.<br>
+					For some integrations to work, we additionally store your friends code, in addition to the user-agent
+					sent via background requests. The user-agent contains the former two. These bits are needed to
+					authenticate yourself against the third-party service.<br>
+					For SpotPass/BOSS integration the consoles principle ID is also collected.<br>
+					All these identifying bits are stored indefinitely.</p>
 
 				<p><strong>StreetPass Outbox:</strong><br>
 					The outbox contains all the messages that your console is trying to send to others via NetPass.
@@ -130,7 +133,8 @@
 					give any data to them</p>
 				<p><strong>Integrations:</strong><br>
 					For integrations to work, the StreetPass-Relay HTTP headers your console uploaded are being
-					transferred to the third-party service. This includes your consoles BOSS UID.</p>
+					transferred to the third-party service. This includes your consoles BOSS UID, your Friend Code and
+					your consoles Local Friend Code Seed.</p>
 			</section>
 			<section>
 				<h2>Contact</h2>
