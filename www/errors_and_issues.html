@@ -45,29 +45,48 @@
 				could also mean that the server is down; if that’s the case, try again later.</p>
 			<h3>“libCURL error 60: Make sure that your system’s date and time are set correctly!”</h3>
 			<p>Make sure Date and Time on your console are correct</p>
-			<ul>
+			<ol>
 				<li>Open the Rosalina menu (L + DPAD Down + SELECT)</li>
-				<li>Go to Miscellaneous options</li>
-				<li>Select 'Update time and date via NTP' (You need an internet connection to do this)</li>
-				<li>Use DPAD Left/Right to change your hour offset</li>
-				<li>Press A to update the time and date of your 3DS</li>
-				<li>Press B to return to the Miscellaneous options menu</li>
-				<li>Select 'Nullify user time offset'</li>
+				<li>Go to <strong>Miscellaneous options → Update time and date via NTP</strong>
+					<ul>
+						<li>You need an internet connection to do this!</li>
+					</ul>
+				</li>
+				<li>Use DPAD Left/Right to change your hour offset, then press A once you're done</li>
+				<li>Go to <strong>Miscellaneous options → Nullify user time offset</strong></li>
 				<li>Restart your 3DS</li>
-			</ul>
+			</ol>
 			<h3>“MusicNotInitiated (19) - The music module has not been initialised yet.”</h3>
 			<p>Follow Section III of <a
 				href="https://3ds.hacks.guide/finalizing-setup.html#section-iii-rtc-and-dsp-setup">
 				this guide</a>.</p>
 			<h3>“NotAgreeEula (108) - User has not agreed to the EULA”</h3>
 			<p>Use <a href="https://github.com/noirscape/dses/releases/latest">Dead Simple EULA Set</a>.</p>
+
 			<h3>“HTTP 403: Forbidden”</h3>
 			<p>The server is refusing the request from your console.</p>
-			<p>You are most likely banned. Please use a recent version of NetPass in order to see the infraction,
-				time of ban and time of unban on the top screen. If you do not get a ban message, or have questions
-				surrounding your ban, please open a ticket our Discord&#39;s Mod Mail channel.</p>
-			<p>Using an emulator can also cause this error, see <a href="general_questions.html">General Questions</a>
-				.</p>
+			<p>This can have multiple reasons:</p>
+			<ul>
+				<li>Your 3DS time & date might be set wrong</li>
+				<li>Your NetPass might be outdated, please try to update (see "Updating" in <a href="installation.html"
+					>Installation</a>) and try again</li>
+				<li>You messed around with your 3DS core console data</li>
+				<li>Your emulator MAC does not match with the donor-console's MAC</li>
+			</ul>
+			<p>First, try these steps to get the correct time and date:</p>
+			<ol>
+				<li>Open the Rosalina menu (L + DPAD Down + SELECT)</li>
+				<li>Go to <strong>Miscellaneous options → Update time and date via NTP</strong>
+					<ul>
+						<li>You need an internet connection to do this!</li>
+					</ul>
+				</li>
+				<li>Use DPAD Left/Right to change your hour offset, then press A once you're done</li>
+				<li>Go to <strong>Miscellaneous options → Nullify user time offset</strong></li>
+				<li>Restart your 3DS</li>
+			</ol>
+			<p>If this does not fix your issue, please contact us via the #mod-mail channel in our Discord Community.
+			</p>
 			<h3>“409: Failed to enter location”</h3>
 			<p>Either the Netpass on your console is outdated, or you don&#39;t have StreetPass enabled on any game.
 				Make sure you <a href="installation.html">install the latest version,</a> and have at least 1 game with

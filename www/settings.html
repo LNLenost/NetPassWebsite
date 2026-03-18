@@ -102,6 +102,56 @@
 				</li>
 				<li>Place images in SD:\config\netpass\background\ (create the folder if it doesn't exist)</li>
 			</ol>
+			<h3>How to only enable specific patches</h3>
+			<p>The patch files and what they do:</p>
+			<ul>
+				<li><strong>0004013000002602.ips</strong> - Removes certain game-specific StreetPass restrictions
+					<ul>
+						<li>Some games (most notably Swapnote) would only let you exchange StreetPasses locally with 3DS
+							friends otherwise</li>
+					</ul>
+				</li>
+				<li><strong>0004013000008002.ips</strong> - Image Share
+					<ul>
+						<li>Creates a temporary URL and QR code to scan with your phone, allowing you to transfer images
+							easily</li>
+					</ul>
+				</li>
+				<li><strong>0004013000003402.ips</strong> - StreetPass Relay (SPR) & SpotPass
+					<ul>
+						<li>SPR allows receiving NetPass StreetPasses in the background</li>
+					</ul>
+				</li>
+			</ul>
+			<p>Important:<br>
+				<i class="fa-solid fa-circle-exclamation" aria-label="Notice:" role="img"></i>
+				The guide changes depending on whether you want to keep SPR & SpotPass or not!</p>
+			<p>Enabling/Disabling specific patches:</p>
+			<ul>
+				<li>If you want to <strong>disable</strong> SPR & SpotPass:
+					<ol>
+						<li>In NetPass go into <strong>Settings → Integrations</strong> to make sure
+							<strong>Pretendo</strong> is set to <strong>Off</strong></li>
+						<li>In NetPass go into <strong>Settings → Miscellaneous → Update patches → Install</strong></li>
+						<li>Go to the SD:\luma\sysmodules folder on your SD card</li>
+						<li>Rename the patches you want to keep from <strong>000401300000XXXX.ips</strong> to
+							<strong>000401300000XXXX.ips.bak</strong></li>
+						<li>In NetPass go into <strong>Settings → Miscellaneous → Update patches → Remove</strong></li>
+						<li>Go back to the SD:\luma\sysmodules folder on your SD card</li>
+						<li>Rename any <strong>000401300000XXXX.ips.bak</strong> back to
+							<strong>000401300000XXXX.ips</strong></li>
+						<li>Reboot your 3DS</li>
+					</ol>
+				</li>
+				<li>If you want to <strong>keep</strong> SPR & SpotPass:
+					<ol>
+						<li>In NetPass go into <strong>Settings → Miscellaneous → Update patches → Install</strong></li>
+						<li>Go to the SD:\luma\sysmodules folder on your SD card</li>
+						<li>Delete the patches you want to remove</li>
+						<li>Reboot your 3DS</li>
+					</ol>
+				</li>
+			</ul>
 		</section>
 	</main>
 	<footer>
